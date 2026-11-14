@@ -1,0 +1,265 @@
+{
+  "note": "READ-ONLY snapshot of live catalogue services+extras, 24 Oct, staging prototype only. Not a write source.",
+  "categories": [
+    {
+      "name": "Services",
+      "items": [
+        {
+          "n": "Wedding Event Planning Package",
+          "g": "c"
+        },
+        {
+          "n": "Royal Arrival Arch",
+          "g": "c"
+        },
+        {
+          "n": "Walkway Setup",
+          "g": "c"
+        },
+        {
+          "n": "Entry Signage Boards",
+          "g": "c"
+        },
+        {
+          "n": "Name Tags",
+          "g": "c"
+        },
+        {
+          "n": "Welcome & Starter Counter Setup",
+          "g": "c"
+        },
+        {
+          "n": "Reception Area Decoration",
+          "g": "c"
+        },
+        {
+          "n": "VIP Lounge Decoration",
+          "g": "c"
+        },
+        {
+          "n": "Royal Snap Lounge",
+          "g": "c"
+        },
+        {
+          "n": "Theme Based Reception Decoration",
+          "g": "c"
+        },
+        {
+          "n": "Theme Based Wedding Reception Decoration",
+          "g": "c"
+        },
+        {
+          "n": "Round Table Setup",
+          "g": "c"
+        },
+        {
+          "n": "Royal Table Setup",
+          "g": "c"
+        },
+        {
+          "n": "High Table",
+          "g": "c"
+        },
+        {
+          "n": "VIP Couche",
+          "g": "c"
+        },
+        {
+          "n": "Glass-Top Centre Tables",
+          "g": "c"
+        },
+        {
+          "n": "Glass Item For Table Decoration",
+          "g": "c"
+        },
+        {
+          "n": "Chair Arrangement",
+          "g": "c"
+        },
+        {
+          "n": "Grass Carpeting",
+          "g": "c"
+        },
+        {
+          "n": "Printed Carpeting (Dining Area)",
+          "g": "c"
+        },
+        {
+          "n": "3D Passage Carpeting",
+          "g": "c"
+        },
+        {
+          "n": "Stage Carpet",
+          "g": "c"
+        },
+        {
+          "n": "Royal Carpeting",
+          "g": "c"
+        },
+        {
+          "n": "Semi-Open Dining Setup",
+          "g": "c"
+        },
+        {
+          "n": "Dining Area With Umbrellas And Side Masking",
+          "g": "c"
+        },
+        {
+          "n": "Kitchen Waterproofing",
+          "g": "c"
+        },
+        {
+          "n": "Bride & Groom Stage Decoration",
+          "g": "c"
+        },
+        {
+          "n": "Stage Backdrop",
+          "g": "c"
+        },
+        {
+          "n": "Stage Hangings",
+          "g": "c"
+        },
+        {
+          "n": "Bridal Sofa",
+          "g": "c"
+        },
+        {
+          "n": "Music Stage",
+          "g": "c"
+        },
+        {
+          "n": "Mandap Setup",
+          "g": "c"
+        },
+        {
+          "n": "Juroon",
+          "g": "c"
+        },
+        {
+          "n": "Mehendi Backdrop",
+          "g": "c"
+        },
+        {
+          "n": "Floral Decoration",
+          "g": "c"
+        },
+        {
+          "n": "Banana Tree Decoration",
+          "g": "c"
+        },
+        {
+          "n": "Natural Leaves",
+          "g": "c"
+        },
+        {
+          "n": "Complete Venue Lighting",
+          "g": "c"
+        },
+        {
+          "n": "Candle Setup",
+          "g": "c"
+        },
+        {
+          "n": "Generator (Power Backup)",
+          "g": "c"
+        },
+        {
+          "n": "Commercial Cooler",
+          "g": "c"
+        },
+        {
+          "n": "Ganesha Idol",
+          "g": "c"
+        },
+        {
+          "n": "Royal Greetings Mirror",
+          "g": "c"
+        },
+        {
+          "n": "Decorative Props",
+          "g": "c"
+        },
+        {
+          "n": "Gazebos",
+          "g": "c"
+        }
+      ]
+    },
+    {
+      "name": "Extras",
+      "items": [
+        {
+          "n": "LED Screen",
+          "g": "c",
+          "rate": "Rs. 200 / sq ft (minimum 10 x 10 ft)"
+        },
+        {
+          "n": "Live On LED Screen (Single Camera)",
+          "g": "c",
+          "rate": "Rs. 13,000"
+        },
+        {
+          "n": "Live On LED Screen (Multiple Cameras)",
+          "g": "c",
+          "rate": "Rs. 25,000 + Rs. 6,000 per additional camera after 2 cameras"
+        },
+        {
+          "n": "Flower Shower",
+          "g": "c",
+          "rate": "Rs. 5,000 + Rs. 3,500 per kg of rose petals"
+        },
+        {
+          "n": "Fog Entry",
+          "g": "c",
+          "rate": "Rs. 600 per kg of dry ice (minimum 25 kg)"
+        },
+        {
+          "n": "Hand Pyro Gun",
+          "g": "c",
+          "rate": "Rs. 1,000 per gun (Indian) / Rs. 1,500 per gun (imported)"
+        },
+        {
+          "n": "Hand Pyro",
+          "g": "c",
+          "rate": "Rs. 900 per piece"
+        },
+        {
+          "n": "Colour Pyro",
+          "g": "c",
+          "rate": "Rs. 600 per piece"
+        },
+        {
+          "n": "Cold Pyro (Entry / Varmala)",
+          "g": "c",
+          "rate": "Rs. 800 per pyro"
+        },
+        {
+          "n": "Pyro Fan",
+          "g": "c",
+          "rate": "Rs. 6,000 per fan"
+        },
+        {
+          "n": "DJ With Sound System",
+          "g": "c",
+          "rate": "Rs. 35,000"
+        },
+        {
+          "n": "Live Band",
+          "g": "c",
+          "rate": "Rs. 3,000 per person, 6 hours"
+        },
+        {
+          "n": "Horse (Baraat)",
+          "g": "c",
+          "rate": "Rs. 70,000"
+        },
+        {
+          "n": "Bihu Husori Performance",
+          "g": "c",
+          "rate": "Starting Rs. 16,000, depends on number of performers"
+        }
+      ]
+    }
+  ]
+}

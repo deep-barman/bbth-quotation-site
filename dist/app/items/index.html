@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogue - BBTH</title>
+<link rel="icon" href="data:,">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css?v=20261026c">
+<link rel="stylesheet" href="/css/modern.css?v=20261110f">
+<link rel="stylesheet" href="/app/items/items.css?v=20261110r">
+</head>
+<body>
+<header class="app-header">
+  <img src="/assets/logo-lockup-dark.png?v=6" alt="BBTH" class="h-logo">
+  <div>
+    <h1>Catalogue</h1>
+    <p><span class="tg-ui">Crafting Dreams with Precision</span></p>
+  </div>
+  <a class="backlink" href="/app/">Quotation Maker</a>
+  <a class="backlink" href="/app/layout/" id="layoutLink">Venue Layout</a>
+  <script>if(!/\.pages\.dev$/.test(location.hostname)){var l=document.getElementById('layoutLink');if(l)l.style.display='none';}</script>
+  <button class="backlink" id="btnSaved" type="button" style="cursor:pointer;background:none;border:0;font:inherit">Saved catalogues</button>
+  <button class="backlink" id="btnRefresh" type="button" style="cursor:pointer;background:none;border:0;font:inherit">Refresh</button>
+  <a class="backlink" href="/">Home</a>
+</header>
+
+<main id="main" class="wrap"></main>
+<div id="catHist" class="apop hidden">
+  <div class="apop-card apop-wide" role="dialog" aria-modal="true">
+    <button type="button" class="apop-x" id="catHistX" aria-label="Close">&times;</button>
+    <h3>Saved catalogues</h3>
+    <p class="hint" style="margin:0 0 10px">Every catalogue you save is stored on the site - same on every device. Open one to refill the client details and selected items; the PDF is generated again with the current item photos and details.</p>
+    <div id="catHistList"></div>
+  </div>
+</div>
+<div id="pdfStage" aria-hidden="true"></div>
+
+<script src="/vendor/html2canvas.min.js"></script>
+<script src="/vendor/jspdf.umd.min.js"></script>
+<script src="/js/data.js"></script>
+<script src="/js/templates.js"></script>
+<script src="/js/pdf.js"></script>
+<script src="/app/items/store.js?v=20261113e"></script>
+<script src="/js/crosstab.js?v=20261026h"></script>
+<script src="/app/items/items.js?v=20261113g"></script>
+<script src="/js/app-update.js?v=20261110f"></script>
+</body>
+</html>

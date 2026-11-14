@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBTH Admin - Quotation Maker</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/lockup.css?v=4">
+  <link rel="stylesheet" href="/css/style.css?v=20261026c">
+<link rel="stylesheet" href="/admin/admin.css?v=20261113e">
+<link rel="stylesheet" href="/css/modern.css?v=20261113a">
+</head>
+<body>
+<!-- LOGIN -->
+<main id="loginView" class="login-full">
+  <section class="step-panel login-card">
+    <img src="/assets/logo-lockup.png?v=6" alt="BBTH" style="width:180px;height:auto;display:block;margin:0 auto 10px">
+    <h2>Admin Panel</h2>
+    <p class="hint">BBTH - authorised users only.</p>
+    <div class="field"><label>Username</label><input id="un" type="text" value="admin" autocomplete="username"></div>
+    <div class="field"><label>Password</label><div class="pw-wrap"><input id="pw" type="password" autocomplete="current-password"><button type="button" id="pwToggle" class="pw-eye" aria-label="Show password" title="Show password"><svg id="pwEyeOpen" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><svg id="pwEyeClosed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><path d="M14.12 14.12A3 3 0 1 1 9.88 9.88"/><line x1="1" y1="1" x2="23" y2="23"/></svg></button></div></div>
+        <div class="field" style="display:flex;align-items:center;gap:8px;margin-top:2px"><input id="admRemember" type="checkbox" style="width:16px;height:16px;accent-color:#264a3b"><label for="admRemember" style="margin:0;font-size:13.5px">Remember me on this device<small style="display:block;color:#8a8474;font-size:12px">Don't tick on a shared computer</small></label></div>
+<button id="loginBtn" class="next-btn">Sign in</button>
+    <div style="margin-top:12px;text-align:center"><button id="forgotLink" type="button" style="background:none;border:none;color:var(--c-maroon,#7b2d43);font-size:13px;text-decoration:underline;cursor:pointer">Forgot password?</button>
+    <div id="forgotBox" class="hidden" style="margin-top:10px;background:#fbf7ef;border:1px solid #e3d9c8;border-radius:10px;padding:12px;font-size:13.5px;line-height:1.5;text-align:left">
+      Contact the admin (A Sikdar) - he can reset your password from the Users tab.
+      <a href="https://wa.me/917002779886" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;background:#25d366;color:#fff;text-decoration:none;border-radius:8px;padding:8px 12px;font-weight:600">Message on WhatsApp</a>
+    </div></div>
+    <p id="loginMsg" class="hint login-err" role="alert"></p>
+    <a class="backlink" href="/" style="margin-top:10px;display:inline-block;color:#254838;font-size:13px">&larr; Back to site</a>
+  </section>
+</main>
+
+<!-- PANEL -->
+<div id="panelView" class="hidden shell">
+  <aside class="side">
+    <div class="side-brand">
+      <img src="/assets/logo-lockup-dark.png?v=6" alt="BBTH" style="width:46px;height:auto;display:block">
+      <div><b>BBTH</b><span>ADMIN PANEL</span></div>
+    </div>
+    <nav class="side-nav">
+      <button class="step-btn active" data-tab="dashboard"><i>&#127968;</i> Dashboard</button>
+      <button class="step-btn" data-tab="quote"><i>&#128221;</i> New Quotation</button>
+      <button class="step-btn" data-tab="history" data-dockind="quotation"><i>&#128195;</i> Quotations</button>
+      <button class="step-btn" data-tab="history" data-dockind="agreement"><i>&#129309;</i> Agreements</button>
+      <button class="step-btn" data-tab="template" data-adminonly="1"><i>&#127912;</i> Template</button>
+      <button class="step-btn" data-tab="agreement" data-adminonly="1"><i>&#128220;</i> Agreement T&amp;C</button>
+      <button class="step-btn" data-tab="services" data-adminonly="1"><i>&#128736;</i> Services &amp; Rates</button>
+      <button class="step-btn" data-tab="company" data-adminonly="1"><i>&#127970;</i> Company</button>
+      <button class="step-btn" data-tab="items" data-adminonly="1"><i>&#128471;</i> Catalogue Editor</button>
+      <button class="step-btn" data-tab="register" data-adminonly="1"><i>&#128203;</i> Client Register</button>
+      <button class="step-btn cat-create" id="menuCreateCat" data-adminonly="1" type="button" title="Pick a quotation - its client details, quotation number and items prefill the catalogue form"><i>&#128218;</i> Create Catalogue</button>
+      <button class="step-btn cat-create" id="menuCreateAgree" data-adminonly="1" type="button" title="Pick a quotation to convert into an agreement, or start a blank agreement"><i>&#128221;</i> Create Agreement</button>
+      <button class="step-btn cat-create" id="menuCatList" data-adminonly="1" type="button" title="Open the list of catalogues saved on the site"><i>&#128218;</i> Catalogue List</button>
+      <button class="step-btn" data-tab="images" data-adminonly="1"><i>&#128444;</i> Image Library</button>
+      <button class="step-btn" data-tab="users" data-adminonly="1"><i>&#128101;</i> Users</button>
+      
+    </nav>
+    <div class="side-foot">
+      <a href="#" data-tab="quote" class="foot-tab">&larr; Quotation form</a>
+      <button id="logoutBtn" type="button">Log out</button>
+    </div>
+  </aside>
+
+  <main class="main-wrap">
+    <div class="topbar">
+      <h1 id="pageTitle">Dashboard</h1>
+      <div class="top-right">
+        <button id="admRefresh" class="small-btn" type="button" title="Reload the whole site with the latest saved data">Refresh</button>
+        <div class="keb-wrap">
+          <button id="kebabBtn" type="button" aria-label="More actions" aria-expanded="false" title="More actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></button>
+          <div id="kebabMenu" class="hidden" role="menu">
+            <button type="button" data-keb="cat" role="menuitem">Create Catalogue</button>
+            <button type="button" data-keb="refresh" role="menuitem">Refresh</button>
+            <a href="/" data-keb="site" role="menuitem">Back to site</a>
+            <button type="button" data-keb="logout" role="menuitem">Log out</button>
+          </div>
+        </div>
+        <span id="topDate"></span>
+        <button id="userChipTop" type="button"><span id="userAvatar"></span><span id="userNameTop"></span></button>
+      </div>
+    </div>
+
+  <section class="tab-panel" id="tab-dashboard">
+    <div class="dash-hero">
+      <div><h2 id="dashHi">Hi!</h2><p>Here is what is happening across BBTH.</p></div>
+      <button class="dash-cta" data-qa="quote" type="button">+ New quotation</button>
+    </div>
+    <div class="stat-grid" id="statGrid"></div>
+    <div class="dash-cols">
+      <div class="dash-card">
+        <h3>Recent active documents</h3>
+        <div id="dashRecent"></div>
+      </div>
+      <div class="dash-card" data-adminonly="1" id="chgCard" style="display:none">
+        <h3>Pending approvals</h3>
+        <div id="chgList"><p class="hint">Loading...</p></div>
+      </div>
+      <div class="dash-card" data-adminonly="1">
+        <h3>Activity</h3>
+        <div style="margin:0 0 8px"><select id="actFilter" style="padding:7px 10px;border:1.5px solid #cfd8c9;border-radius:10px;font:inherit;font-size:13px;background:#fff;width:100%">
+          <option value="">All actions</option>
+          <option value="login">Logins</option>
+          <option value="quotation">Quotations &amp; agreements</option>
+          <option value="catalogue">Catalogue changes</option>
+          <option value="user">User management</option>
+        </select></div>
+        <div id="dashActivity"><p class="hint">Loading...</p></div>
+        <p class="hint" style="margin:8px 0 0">Recorded by the server: logins, document create/delete/restore, service adds, user changes. Not recorded yet: catalogue item edits and photo changes.</p>
+      </div>
+      <div class="dash-card">
+        <h3>All controls</h3>
+        <p class="hint" style="margin:0 0 8px">Every admin control in one place, grouped. These open the same screens as the menu.</p>
+        <div class="ctl-group"><b>Documents</b>
+          <div class="qa-list">
+            <button class="qa-item" data-goto='[data-tab="quote"]' type="button">New quotation</button>
+            <button class="qa-item" data-goto='[data-tab="history"][data-dockind="quotation"]' type="button">Quotations</button>
+            <button class="qa-item" data-goto='[data-tab="history"][data-dockind="agreement"]' type="button">Agreements</button>
+            <button class="qa-item" data-goto="#menuCreateCat" data-adminonly="1" type="button">Create catalogue</button>
+            <button class="qa-item" data-goto="#menuCatList" data-adminonly="1" type="button">Catalogue list</button>
+            <button class="qa-item" data-goto="#menuCreateAgree" data-adminonly="1" type="button">Create agreement</button>
+          </div>
+        </div>
+        <div class="ctl-group" data-adminonly="1"><b>Catalogue &amp; content</b>
+          <div class="qa-list">
+            <button class="qa-item" data-goto='[data-tab="items"]' type="button">Catalogue editor</button>
+            <button class="qa-item" data-goto='[data-tab="services"]' type="button">Services &amp; rates</button>
+            <button class="qa-item" data-goto='[data-tab="images"]' type="button">Image library</button>
+            <button class="qa-item" data-goto='[data-tab="template"]' type="button">PDF template</button>
+            <button class="qa-item" data-goto='[data-tab="agreement"]' type="button">Agreement T&amp;C</button>
+            <button class="qa-item" data-goto='[data-tab="company"]' type="button">Company</button>
+          </div>
+        </div>
+        <div class="ctl-group" data-adminonly="1"><b>People &amp; access</b>
+          <div class="qa-list">
+            <button class="qa-item" data-goto='[data-tab="register"]' type="button">Client register</button>
+            <button class="qa-item" data-goto='[data-tab="users"]' type="button">Users &amp; staff access</button>
+          </div>
+          <p class="hint" style="margin:6px 0 0">Deleted documents: Quotations &rarr; Recycle bin. Staff edits wait in Pending approvals above.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab-panel" id="tab-history">
+    <h2><span id="histTitle">Saved quotations</span> <span id="qCount" class="countpill">0</span></h2>
+    <p class="hint">Every quotation PDF made by a logged-in user is stored here, with full details.</p>
+    <div class="qfilter-row">
+      <input id="qSearch" class="search" type="text" placeholder="Search client or reference no.">
+      <select id="userFilter" class="pick"><option value="">All users</option></select>
+      <select id="typeFilter" class="pick"><option value="">All documents</option><option value="quotation">Quotations</option><option value="agreement">Agreements</option></select>
+      <button id="binToggle" class="small-btn" type="button" data-adminonly="1">Recycle bin</button>
+      <button id="grpToggle" class="small-btn" type="button" title="Group a client's quotation + agreement(s) for the same event into one file">Flat list</button>
+      <button id="compToggle" class="small-btn hidden" type="button" data-adminonly="1" title="Documents of clients marked Completed/Cancelled in the Clients tab - hidden from this list, never deleted">Completed / Cancelled (0)</button>
+      <button id="qRefresh" class="small-btn">Refresh</button>
+    </div>
+    <p id="binHint" class="hint hidden" style="color:#a33">Recycle bin: deleted records stay here until you restore them or delete them forever.</p>
+    <p id="compHint" class="hint hidden">Showing documents of completed/cancelled events. They were hidden from the main list, not deleted - set the client back to an active status in Clients to bring them back.</p>
+    <div id="qList"></div>
+  </section>
+
+  <section class="tab-panel hidden" id="tab-quote">
+    <h2>New quotation</h2>
+    <p class="hint">Make the quotation right here in the admin panel - it saves to Quotations when the PDF is downloaded. Staff can keep using their own panel; both work on the same data.</p>
+    <iframe id="frameQuote" data-src="/app/?new=quote" title="Quotation form" style="width:100%;height:82vh;border:1px solid #ddd2bd;border-radius:12px;background:#f6f4ea" loading="lazy"></iframe>
+  </section>
+
+  <section class="tab-panel hidden" id="tab-template">
+    <h2>PDF template</h2>
+    <div class="tpl-grid">
+      <div>
+        <h3>Design (applies to both documents)</h3>
+        <div id="colorRows"></div>
+        <div class="field"><label>Heading font</label><select id="fontHead" class="pick"></select></div>
+        <div class="field"><label>Body font</label><select id="fontBody" class="pick"></select></div>
+        <h3>Logo</h3>
+        <div class="add-row"><input id="logoFile" type="file" accept="image/*"><button id="logoSet" class="small-btn" type="button">Use this logo</button></div>
+        <div class="add-row" style="margin-top:8px"><button id="logoReset" class="small-btn danger" type="button">Back to BBTH logo</button></div>
+
+        <h3>Document text</h3>
+        <div class="tpl-switch">
+          <button id="tplQ" class="tpl-pill sel" type="button">Quotation template</button>
+          <button id="tplA" class="tpl-pill" type="button">Agreement template</button>
+        </div>
+
+        <div id="tplGroupQ">
+          <h3>Cover page text</h3>
+          <div class="field"><label>Cover line under the logo box (what BBTH does)</label><input data-text="coverTagline"></div>
+          <div class="field"><label>Brand tagline (English | Assamese, shown on covers, back pages and site)</label><input data-text="tagline"></div>
+          <h3>Section titles</h3>
+          <div class="field"><label>Articles big title</label><input data-text="articlesTitle"></div>
+            <div class="field"><label>Reference big title</label><input data-text="refTitle"></div>
+            <h3>Page order</h3>
+          <div id="orderList"></div>
+        </div>
+
+        <div id="tplGroupA" class="hidden">
+          <h3>Agreement cover</h3>
+          <div class="field"><label>Cover label (gold, top right)</label><input data-text="agreeCoverNo"></div>
+          <div class="field"><label>Cover main title</label><input data-text="agreeMainTitle"></div>
+          <div class="field"><label>Cover subtitle</label><input data-text="agreeCoverSubtitle"></div>
+          <h3>Intro &amp; parties</h3>
+          <div class="field"><label>Intro paragraph ({agreedate} agreement date, {date} event dates, {planner} {address} {client} {place} get replaced)</label><textarea data-text="agreeIntro" rows="3"></textarea></div>
+          <div class="field"><label>GST note next to budget/total (leave blank to hide)</label><input data-text="gstNote"></div>
+          <div class="field"><label>Agreement date label (on the date card)</label><input data-text="agreeDateLabel"></div>
+          <div class="field"><label>Parties heading</label><input data-text="agreeParties"></div>
+          <div class="field"><label>Planner label</label><input data-text="agreePlanner"></div>
+          <div class="field"><label>Client label</label><input data-text="agreeClient"></div>
+          <div class="field"><label>Date &amp; budget label</label><input data-text="agreeDateBudget"></div>
+          <h3>Articles</h3>
+          <div class="field"><label>Articles heading</label><input data-text="agreeArticles"></div>
+            <h3>Signatures</h3>
+          <div class="field"><label>Signature heading</label><input data-text="agreeSignHead"></div>
+          <div class="field"><label>Signature note</label><textarea data-text="agreeSignNote" rows="2"></textarea></div>
+          <div class="field"><label>Signature label - planner</label><input data-text="agreeSignPlanner"></div>
+          <div class="field"><label>Signature label - client</label><input data-text="agreeSignClient"></div>
+          <div class="field"><label>Witness label</label><input data-text="agreeWitness"></div>
+          <h3>Planner &amp; footer</h3>
+          <div class="field"><label>Planner name (signature block + Best Regards)</label><input data-comp="signoff"></div>
+          <div class="field"><label>Footer contacts (cover bottom band)</label><input data-comp="footerContacts"></div>
+        </div>
+
+        <h3>Reference images &amp; back page (both documents)</h3>
+        <div class="field"><label>Reference-images note (always printed under the photos)</label><input data-text="refNote"></div>
+        <div class="field"><label>Thank-you title</label><input data-text="thanksTitle"></div>
+        <div class="field"><label>Thank-you message ({company} = company name)</label><textarea data-text="thanksMsg" rows="2"></textarea></div>
+
+        <h3>PDF labels &amp; table headers (both documents)</h3>
+        <div class="field"><label>Cover title</label><input data-text="ordCoverTitle"></div>
+        <div class="field"><label>Cover subline</label><input data-text="ordCoverSub"></div>
+        <div class="field"><label>Client label</label><input data-text="ordOrderedBy"></div>
+        <div class="field"><label>Number label</label><input data-text="ordNoLabel"></div>
+        <div class="field"><label>Table card: Prepared by</label><input data-text="cardPreparedBy"></div>
+        <div class="field"><label>Table card: Date &amp; budget</label><input data-text="cardDateBudget"></div>
+        <div class="field"><label>Table header: No.</label><input data-text="tblNo"></div>
+        <div class="field"><label>Table header: Article</label><input data-text="tblArticle"></div>
+        <div class="field"><label>Table header: Size</label><input data-text="tblSize"></div>
+        <div class="field"><label>Table header: Qty</label><input data-text="tblQty"></div>
+        <div class="field"><label>Table header: Theme</label><input data-text="tblTheme"></div>
+        <div class="field"><label>Table header: Service</label><input data-text="tblService"></div>
+        <div class="field"><label>Table header: Rate</label><input data-text="tblRate"></div>
+        <div class="field"><label>Label: Budget</label><input data-text="lblBudget"></div>
+        <div class="field"><label>Label: Contact</label><input data-text="lblContact"></div>
+        <div class="field"><label>Label: Date</label><input data-text="lblDate"></div>
+        <div class="field"><label>Footer: Best regards</label><input data-text="lblBestRegards"></div>
+        <div class="field"><label>Signature label: Signature</label><input data-text="sigLabSignature"></div>
+        <div class="field"><label>Signature label: Name</label><input data-text="sigLabName"></div>
+        <div class="field"><label>Signature label: Date</label><input data-text="sigLabDate"></div>
+        <div class="field"><label>Signature label: Place</label><input data-text="sigLabPlace"></div>
+
+        <h3>Quotation form text (steps, buttons, field labels)</h3>
+        <div class="field"><label>Step 1 button</label><input data-text="fStep1"></div>
+        <div class="field"><label>Step 2 button</label><input data-text="fStep2"></div>
+        <div class="field"><label>Step 4 button</label><input data-text="fStep4"></div>
+        <div class="field"><label>Step 5 button</label><input data-text="fStep5"></div>
+        <div class="field"><label>Step 1 heading: Client</label><input data-text="fHead1"></div>
+        <div class="field"><label>Step 1 heading: Company</label><input data-text="fHead1b"></div>
+        <div class="field"><label>Step 2 heading</label><input data-text="fHead2"></div>
+        <div class="field"><label>Step 4 heading</label><input data-text="fHead4"></div>
+        <div class="field"><label>Step 5 heading</label><input data-text="fHead5"></div>
+        <div class="field"><label>Next button 1</label><input data-text="fNext1"></div>
+        <div class="field"><label>Next button 2</label><input data-text="fNext2"></div>
+        <div class="field"><label>Next button 4</label><input data-text="fNext4"></div>
+        <div class="field"><label>Generate PDF button</label><input data-text="fGenerate"></div>
+        <div class="field"><label>App title (top bar)</label><input data-text="fAppTitle"></div>
+        <div class="field"><label>Login heading</label><input data-text="fGateTitle"></div>
+        <div class="field"><label>Login: username label</label><input data-text="fGateUser"></div>
+        <div class="field"><label>Login: password label</label><input data-text="fGatePass"></div>
+        <div class="field"><label>Login button</label><input data-text="fGateBtn"></div>
+        <div class="field"><label>Services: add-your-own heading</label><input data-text="fAddSvcHead"></div>
+        <div class="field"><label>Images: layout heading</label><input data-text="fLayoutHead"></div>
+        <div class="field"><label>Images: add photos heading</label><input data-text="fPhotosHead"></div>
+        <div class="field"><label>Images: page preview heading</label><input data-text="fPageHead"></div>
+        <div class="field"><label>PDF step: design heading</label><input data-text="fDesignHead"></div>
+        <div class="field"><label>PDF step: agreement details heading</label><input data-text="fAgDetHead"></div>
+        <div class="field"><label>Preview button</label><input data-text="fPreviewBtn"></div>
+        <div class="field"><label>Copy-link button</label><input data-text="fShareCopy"></div>
+        <div class="field"><label>WhatsApp button</label><input data-text="fShareWa"></div>
+        <div class="field"><label>"+ Add" buttons</label><input data-text="fAddBtn"></div>
+        <div class="field"><label>Clear draft button</label><input data-text="fClearDraft"></div>
+        <div class="field"><label>Label: Client name</label><input data-text="fLblClientName"></div>
+        <div class="field"><label>Label: Place</label><input data-text="fLblPlace"></div>
+        <div class="field"><label>Label: Phone number</label><input data-text="fLblPhone"></div>
+        <div class="field"><label>Label: Event dates</label><input data-text="fLblEventDates"></div>
+        <div class="field"><label>Select all button</label><input data-text="fSelAll"></div>
+        <div class="field"><label>Deselect all button</label><input data-text="fDeselAll"></div>
+        <div class="field"><label>Label: Theme (service rows)</label><input data-text="fLblTheme"></div>
+        <div class="field"><label>Label: Qty (service rows)</label><input data-text="fLblQty"></div>
+        <div class="field"><label>Label: Size (service rows)</label><input data-text="fLblSize"></div>
+        <div class="field"><label>Label: Budget</label><input data-text="fLblBudget"></div>
+        <div class="field"><label>Label: Company name</label><input data-text="fLblCompany"></div>
+        <div class="field"><label>Label: Address</label><input data-text="fLblAddr"></div>
+        <div class="field"><label>Label: Contact number</label><input data-text="fLblContact"></div>
+        <div class="field"><label>Label: Sign-off name</label><input data-text="fLblSignoff"></div>
+        <div class="field"><label>Label: Footer contacts</label><input data-text="fLblFooter"></div>
+        <div class="field"><label>Placeholder: Client name</label><input data-text="fPhClientName"></div>
+        <div class="field"><label>Placeholder: Place</label><input data-text="fPhClientPlace"></div>
+        <div class="field"><label>Placeholder: Phone</label><input data-text="fPhPhone"></div>
+        <div class="field"><label>Placeholder: Budget</label><input data-text="fPhBudget"></div>
+      </div>
+      <div>
+        <h3>Live preview</h3>
+        <div class="pv-zoombar"><button id="pvFitBtn" type="button" class="on" onclick="setPvMode(true)">Fit width</button><button id="pvFullBtn" type="button" onclick="setPvMode(false)">Full size</button><span class="hint" style="margin:0">Scroll to see the whole page</span></div>
+        <div class="pv-scroll pv-inline"><div id="admScale"><div id="admPv"></div></div></div>
+        <p class="hint" id="pvHint">Cover page with current settings.</p>
+        <button id="testPdf" class="small-btn" type="button" style="margin-top:10px">Download test quotation PDF</button>
+        <p class="hint" id="testPdfMsg"></p>
+      </div>
+    </div>
+    <button id="saveTpl" class="generate-btn">Save template &amp; site settings</button>
+    <p id="tplMsg" class="hint"></p>
+    <button id="resetTpl" class="small-btn danger">Reset everything to original defaults</button>
+  </section>
+
+  <section class="tab-panel hidden" id="tab-agreement">
+    <div class="card">
+      <h3>Agreement - Terms &amp; Conditions</h3>
+      <p class="hint">Edit, add, delete or reorder the clauses. Placeholders {total} {advance} {balance} {duedate} are filled from each agreement. Saving applies to NEW agreements instantly. Agreements already saved keep their own wording.</p>
+      <div class="field"><label>Heading</label><input id="tcHead"></div>
+      <div id="tcList"></div>
+      <button type="button" class="btn ghost" id="tcAdd">+ Add clause</button>
+      <div class="field" style="margin-top:14px"><label>Closing paragraph (after the last clause)</label><textarea id="tcClosing" rows="3"></textarea></div>
+      <button type="button" class="btn" id="tcSave">Save Terms &amp; Conditions</button>
+    </div>
+  </section>
+  <section class="tab-panel hidden" id="tab-services">
+    <h2>Default services (form tick list)</h2>
+    <div id="svcEdit"></div>
+    <div class="add-row"><input id="svcNew" type="text" placeholder="New service name"><select id="svcNewCat" title="Category"></select><button id="svcAdd" class="small-btn" type="button">+ Add</button></div>
+    <button id="saveSvc" class="generate-btn">Save services</button>
+    <p id="svcMsg" class="hint"></p>
+  </section>
+
+  <section class="tab-panel hidden" id="tab-company">
+    <h2>Company details (Prepared By)</h2>
+    <div class="field"><label>Company name</label><input data-comp="company"></div>
+    <div class="field"><label>Address</label><input data-comp="address"></div>
+    <div class="field"><label>Contact number</label><input data-comp="contact"></div>
+    <div class="field"><label>Sign-off name (Best Regards)</label><input data-comp="signoff"></div>
+    <div class="field"><label>Footer contacts (cover bottom band)</label><input data-comp="footerContacts"></div>
+    <h3 style="margin-top:24px">Portal notices (shown on the home page)</h3>
+    <p class="hint">Short announcements for staff - maintenance, rate changes, festival hours. Empty list = the section disappears from the home page.</p>
+    <div id="noticeEdit"></div>
+    <div class="add-row"><input id="noticeNew" type="text" placeholder="Notice text (e.g. Office closed on 26 Oct for Kali Puja)"><button id="noticeAdd" class="small-btn" type="button">+ Add</button></div>
+    <button id="saveComp" class="generate-btn">Save company details &amp; notices</button>
+    <p id="compMsg" class="hint"></p>
+  </section>
+
+  <section class="tab-panel hidden" id="tab-images">
+    <h2>Shared Image Library</h2>
+    <p class="hint">Reference photos the team can reuse in quotations. Rename, replace or remove them here. Removed images sit in the recycle bin until you delete them forever.</p>
+    <div class="add-row" style="margin:10px 0 14px;flex-wrap:wrap;gap:8px">
+      <input id="imgUpLabel" type="text" placeholder="Label for the new images (e.g. Stage decor)" style="flex:1;min-width:180px">
+      <input id="imgUpFiles" type="file" accept="image/*" multiple style="flex:2;min-width:220px;padding:10px;border:2px dashed #dde5d0;border-radius:10px;background:#fff">
+      <button id="imgUpBtn" class="small-btn" type="button">Upload to library</button>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;margin:10px 0 14px">
+      <button id="imgBinToggle" class="small-btn" type="button">Open recycle bin</button>
+      <span id="imgLibMsg" class="hint"></span>
+    </div>
+    <div id="imgAdminList" class="thumbs lib"></div>
+  </section>
+  <section class="tab-panel hidden" id="tab-users">
+    <h2>Users</h2>
+    <p class="hint">People who can log in and make quotations. Passwords are stored hashed and are never shown anywhere.</p>
+    <h3>Registered users</h3>
+    <input id="uSearch" class="search" type="text" placeholder="Search name, username, designation, phone..." style="margin-bottom:10px;min-width:240px">
+    <div id="uList"></div>
+    <h3 style="margin-top:22px">Register a new user</h3>
+    <div class="user-form">
+      <div class="uf-head">
+        <div class="uf-avatar">BB</div>
+        <div><div class="uf-title">Team Member Profile</div><div class="uf-sub">Login details plus practical info for your records. Passwords are stored hashed and never shown again.</div></div>
+      </div>
+      <div class="uf-grid">
+        <div class="field"><label>Full Name</label><input id="uFull" type="text" placeholder="e.g. Hannan Ali"></div>
+        <div class="field"><label>Designation</label><input id="uDesig" type="text" list="desigList" placeholder="e.g. Sales Manager" autocomplete="off"><datalist id="desigList"><option value="Sales Manager"><option value="Event Manager"><option value="Operations Manager"><option value="Senior Designer"><option value="Designer"><option value="Decorator"><option value="Site Supervisor"><option value="Electrician"><option value="Accountant"><option value="Office Assistant"></datalist></div>
+        <div class="field"><label>Username (login)</label><input id="uName" type="text" placeholder="Auto-suggested from name" autocomplete="off"></div>
+        <div class="field"><label>Password (min 6)</label><input id="uPass" type="text" placeholder="Share privately" autocomplete="off"></div>
+        <div class="field"><label>Role</label><select id="uRole" class="pick"><option value="staff">Staff - makes quotations</option><option value="admin">Admin - full control</option></select></div>
+        <div class="field"><label>Phone</label><input id="uPhone" type="tel" placeholder="+91 ..."></div>
+        <div class="field"><label>Email</label><input id="uEmail" type="email" placeholder="name@email.com"></div>
+        <div class="field uf-wide"><label>Notes <small style="font-weight:400;color:#8a8474">(optional)</small></label><textarea id="uNotes" rows="2" placeholder="Anything worth remembering - city, responsibilities, references..."></textarea></div>
+        <div class="field uf-wide" id="uAccessWrap">
+          <label>Access</label>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:12px;border:1.5px solid #dde5d0;border-radius:10px;background:#fff">
+            <label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;cursor:pointer"><input type="radio" name="uAccess" value="all" checked style="width:16px;height:16px;accent-color:#264a3b"> All access <small style="color:#8a8474;font-weight:400">- every current staff feature</small></label>
+            <label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;cursor:pointer"><input type="radio" name="uAccess" value="custom" style="width:16px;height:16px;accent-color:#264a3b"> Choose features</label>
+            <div id="uPermBoxes" style="display:none;flex-direction:column;gap:6px;margin-left:26px">
+              <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer"><input type="checkbox" id="uPermRegister" style="width:16px;height:16px;accent-color:#264a3b"> Client Register</label>
+              <label style="display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer"><input type="checkbox" id="uPermCatalogue" style="width:16px;height:16px;accent-color:#264a3b"> Catalogue Editor</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="uCreate" class="next-btn" type="button" style="margin-top:14px">Register User</button>
+      <p id="userMsg" class="hint"></p>
+    </div>
+  </section>
+
+  <section class="tab-panel hidden" id="tab-catalogue">
+    <h2>Catalogue</h2>
+    <p class="hint">The client-facing catalogue tool - pick items, fill venue/dates and download the catalogue PDF. Same data everywhere: edits in Items &amp; Photos show up here, in the PDF and in the quotation form.</p>
+    <iframe id="frameCatalogue" data-src="/app/items/" style="width:100%;height:78vh;border:1px solid #ddd2bd;border-radius:12px;background:#f6f4ea" loading="lazy"></iframe>
+  </section>
+  <section class="tab-panel hidden" id="tab-items">
+    <h2>Catalogue Editor</h2>
+    <p class="hint">Edit every part of the catalogue: rename items, add or delete items, organize categories, upload or change photos. Press Save inside the editor and the change goes live for everyone - on the staff catalogue page and in its PDF.</p>
+    <iframe id="frameItems" data-src="/app/items/admin/" style="width:100%;height:78vh;border:1px solid #ddd2bd;border-radius:12px;background:#f6f4ea" loading="lazy"></iframe>
+  </section>
+  <section class="tab-panel hidden" id="tab-register">
+    <h2>Clients</h2>
+    <div class="reg-subtabs" role="tablist">
+      <button type="button" class="reg-sub active" data-regsub="upcoming">Upcoming <span class="reg-sub-n" id="regNUp">0</span></button>
+      <button type="button" class="reg-sub" data-regsub="create">+ Create client</button>
+      <button type="button" class="reg-sub" data-regsub="completed">Completed / Cancelled <span class="reg-sub-n" id="regNDone">0</span></button>
+    </div>
+    <div style="margin:6px 0 10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <select id="regSortBy" class="pick" title="Sort clients" style="min-width:150px">
+        <option value="event">Sort: Nearest event</option>
+        <option value="name">Sort: Name (A-Z)</option>
+        <option value="updated">Sort: Recently updated</option>
+      </select>
+      <input id="regSearch" class="search" type="text" placeholder="Search name, phone, venue, doc no..." style="margin-left:auto;min-width:220px">
+    </div>
+    <p class="hint">Upcoming events stay below, grouped category-wise (Confirmed, Scheduled, Quoted, Enquiry), nearest date first. Clients marked Completed or Cancelled move to the Completed / Cancelled tab automatically - records are never deleted.</p>
+    <div id="regPaneCreate" hidden>
+    <div class="reg-form">
+      <input type="hidden" id="regId">
+      <div class="reg-grid">
+        <div class="field"><label>Client name *</label><input id="regName" type="text" autocomplete="off"><div id="regSuggest" style="margin-top:5px"></div></div>
+        <div class="field"><label>Phone</label><input id="regPhone" type="text" autocomplete="off"></div>
+        <div class="field"><label>Event date(s)</label><input id="regDates" type="text" placeholder="e.g. 24/10/2026 or 05-06/12/2026" autocomplete="off"></div>
+        <div class="field"><label>Venue</label><input id="regVenue" type="text" autocomplete="off"></div>
+        <div class="field"><label>Quotation / Agreement no(s)</label><input id="regDocs" type="text" placeholder="e.g. BBTH/Q4/189, BBTH/A1/101" autocomplete="off"></div>
+        <div class="field"><label>Type of event</label><input id="regType" list="regTypes" placeholder="Wedding, Reception, Haldi...">
+        <datalist id="regTypes"><option>Wedding</option><option>Reception</option><option>Engagement</option><option>Haldi</option><option>Mehendi</option><option>Sangeet</option><option>Birthday</option><option>Anniversary</option><option>Corporate</option><option>Other</option></datalist></div>
+        <div class="field"><label>Status</label><select id="regStatus" class="pick"><option>Enquiry</option><option>Quoted</option><option>Confirmed</option><option>Scheduled</option><option>Completed</option><option>Cancelled</option></select></div>
+        <div class="field"><label>Quoted amount (&#8377;)</label><input id="regQuoted" type="number" min="0" step="any" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label>Final agreed amount (&#8377;)</label><input id="regAgreed" type="number" min="0" step="any" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label>Advance amount (&#8377;)</label><input id="regAdvance" type="number" min="0" step="any" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label>Balance (auto)</label><input id="regBalance" type="text" readonly tabindex="-1" placeholder="agreed - advance"></div>
+        <div class="field"><label>Payment due date (auto)</label><input id="regDue" type="text" readonly tabindex="-1" placeholder="2 days before first event date"></div>
+        <div class="field"><label>Payment status (override)</label><select id="regPayOv" class="pick"><option value="">Auto (from amounts)</option><option>Not Paid</option><option>Partial</option><option>Paid</option><option>No charge</option><option>Review (overpaid)</option></select></div>
+      </div>
+      <div class="field"><label>Notes</label><input id="regNotes" type="text" autocomplete="off"></div>
+      <div class="add-row" style="margin-top:10px">
+        <button id="regSave" class="small-btn" type="button">Save entry</button>
+        <button id="regClear" class="small-btn" type="button">Clear form</button>
+        <span id="regMsg" class="hint"></span>
+      </div>
+    </div>
+    </div>
+    <div id="regPaneList">
+    <div id="regStrip" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 2px"></div>
+    <div style="margin:10px 0 6px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <button id="regExport" class="small-btn" type="button" title="Download the full Client Register as a native Excel file (balance stays a live formula)">Export Excel (.xlsx)</button>
+      <button id="regExportCsv" class="small-btn" type="button" title="Same export as plain CSV (for other software)">CSV</button>
+      <button id="regExportChart" class="small-btn" type="button" title="Download clients as a Booking Chart (No., Date, Venue, Function, Setup only - no amounts)" style="border-color:#c9a227;color:#7a5f0e">Booking chart (.xlsx)</button>
+      <span class="chart-range" title="Booking chart date range - default aaj se aage">
+        <label for="regChartFrom">From</label><input id="regChartFrom" type="date">
+        <label for="regChartTo">To</label><input id="regChartTo" type="date">
+      </span>
+    </div>
+    <div id="regSheetWrap" style="margin-top:10px;overflow-x:auto"></div>
+    </div>
+  </section>
+  <section class="tab-panel hidden" id="tab-drafts">
+    <h2>Form drafts (this browser)</h2>
+    <p class="hint">The form's unsaved draft lives in each browser. Export it here to move a draft between devices.</p>
+    <button id="draftExport" class="small-btn">Export draft (download JSON)</button>
+    <div class="add-row" style="margin-top:12px"><input id="draftFile" type="file" accept="application/json"><button id="draftImport" class="small-btn" type="button">Import draft</button></div>
+    <p id="draftMsg" class="hint"></p>
+  </section>
+  </main>
+</div>
+
+<div id="invModal" class="hidden">
+  <div class="step-panel" style="max-width:860px;margin:0 auto">
+    <h2 id="invTitle">Export for Vyapar</h2>
+    <div class="two-col">
+      <div class="field"><label>Invoice No.</label><input id="invNo" type="text"></div>
+      <div class="field"><label>Date</label><input id="invDate" type="date"></div>
+    </div>
+    <div class="two-col">
+      <div class="field"><label>Party Name</label><input id="invClient" type="text"></div>
+      <div class="field"><label>Place</label><input id="invPlace" type="text"></div>
+    </div>
+    <div class="field"><label>Client Contact</label><input id="invPhone" type="text"></div>
+    <h3 style="margin:14px 0 8px">Line Items</h3>
+    <div id="invItems"></div>
+    <button id="invAddRow" class="small-btn" type="button" style="margin-top:8px">+ Add item</button>
+    <div id="invTotal" style="text-align:right;font-weight:600;color:#264a3b;font-size:17px;margin-top:12px"></div>
+    <p class="hint">No GST columns - BBTH is not GST registered. In Vyapar, use Bulk Upload / Import Sale; Vyapar auto-maps these columns.</p>
+    <p id="invMsg" class="hint"></p>
+    <div style="display:flex;gap:10px;margin-top:14px">
+      <button id="invCsv" class="next-btn" type="button">Download CSV</button>
+      <button id="invCopy" class="small-btn" type="button">Copy data</button>
+      <button id="invCancel" class="small-btn" type="button">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div id="pdfStage" aria-hidden="true"></div>
+<div id="confirmModal" class="cmodal hidden" role="dialog" aria-modal="true">
+  <div class="cmodal-card">
+    <h3 id="cmTitle">Are you sure?</h3>
+    <p id="cmBody" class="hint"></p>
+    <div class="cmodal-btns">
+      <button id="cmCancel" class="small-btn" type="button">Cancel</button>
+      <button id="cmOk" class="small-btn danger" type="button">Delete</button>
+    </div>
+  </div>
+</div>
+<div id="toastWrap" class="toast-wrap" aria-live="polite"></div>
+<div id="savedToast" class="saved-toast hidden" role="status"></div>
+
+<div id="rpModal" class="cmodal hidden" role="dialog" aria-modal="true">
+  <div class="cmodal-card">
+    <h3 style="margin:0 0 6px">Reset password</h3>
+    <p class="hint" style="margin:0 0 12px">Set a new password for <b id="rpWho"></b>. Their old password stops working on every device right away. Share the new one privately.</p>
+    <label style="display:block;font-size:13px;font-weight:600;margin-bottom:4px">New password</label>
+    <input id="rpPass" type="password" autocomplete="new-password" style="width:100%;margin-bottom:10px" placeholder="At least 6 characters">
+    <label style="display:block;font-size:13px;font-weight:600;margin-bottom:4px">Type it again</label>
+    <input id="rpPass2" type="password" autocomplete="new-password" style="width:100%;margin-bottom:6px" placeholder="Repeat the new password">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <button id="rpShow" type="button" class="small-btn">Show</button>
+      <span id="rpMsg" style="color:#b03030;font-size:13px"></span>
+    </div>
+    <div class="cmodal-btns">
+      <button id="rpCancel" type="button" class="small-btn">Cancel</button>
+      <button id="rpSave" type="button" class="next-btn" style="width:auto;padding:10px 18px">Reset password</button>
+    </div>
+  </div>
+</div>
+<div id="catPick" class="apop hidden">
+  <div class="apop-card apop-wide" role="dialog" aria-modal="true">
+    <button type="button" class="apop-x" id="catPickX" aria-label="Close">&times;</button>
+    <h3>Create Catalogue</h3>
+    <p class="hint" style="margin:0 0 12px">Pick a quotation - the client details, quotation number and matching items fill in automatically.</p>
+    <button type="button" class="catpick-row" id="catPickBlank" style="width:100%;margin:0 0 10px;border:1.5px dashed #c9a84c"><b>Start blank - fill client details yourself</b><span>No quotation needed</span></button>
+    <input id="catPickQ" class="search" type="text" placeholder="Search client or quotation number" autocomplete="off">
+    <div id="catPickList"></div>
+  </div>
+</div>
+<div id="tcModal" class="tc-modal hidden"><div class="tc-box"><div class="tc-tick">&#10003;</div><h3>Updated successfully</h3><p>New agreements will use these Terms &amp; Conditions right away.</p><button type="button" class="btn" id="tcOk">OK</button></div></div>
+<script src="/vendor/html2canvas.min.js"></script>
+<script src="/vendor/jspdf.umd.min.js"></script>
+<script src="/js/groups.js?v=3"></script>
+<script src="/js/data.js?v=45"></script>
+<script src="/js/templates.js?v=14"></script>
+<script src="/js/pdf.js?v=20261110i"></script>
+<script src="/js/vendor/jszip.min.js?v=20261110f"></script>
+<script src="/js/vendor/xlsx-style.min.js?v=20261110f"></script>
+<script src="/js/crosstab.js?v=20261026h"></script>
+<script src="/admin/admin.js?v=20261113f"></script>
+<script src="/js/pwchange.js?v=1792933678"></script>
+<script src="/js/modern-ui.js?v=20261113a"></script>
+<script src="/js/app-update.js?v=20261110f"></script>
+  <div id="regPop" class="hidden" style="position:fixed;inset:0;background:rgba(20,30,22,.45);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px">
+      <div style="background:#fff;border-radius:14px;max-width:440px;width:100%;padding:20px 22px;color:#2c3a2e;box-shadow:0 18px 50px rgba(0,0,0,.3)">
+        <h3 id="regPopTitle" style="margin:0 0 8px;font-size:16.5px"></h3>
+        <p id="regPopBody" style="margin:0 0 6px;font-size:14px;line-height:1.5"></p>
+        <p id="regPopSub" class="hint" style="margin:0 0 4px;font-size:12.5px"></p>
+        <div id="regPopBtns" style="display:flex;gap:10px;margin-top:14px"></div>
+      </div>
+    </div>
+
+</body>
+</html>

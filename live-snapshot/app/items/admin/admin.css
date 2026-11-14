@@ -1,0 +1,94 @@
+/* BBTH Catalogue Editor - clean card layout (25 Oct redesign) */
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.toolbar .spacer{flex:1}
+.btn-line{border:1.5px solid var(--sage,#264a3b);background:#fff;color:var(--sage,#264a3b);border-radius:10px;padding:11px 18px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.btn-line:hover{background:#f0f5ec}
+.btn-danger{border:1.5px solid #b0664f;background:#fff;color:#b0664f;border-radius:10px;padding:11px 18px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.btn-danger:hover{background:#faf0ec}
+.srcnote{font-size:12px;color:#97897a}
+
+/* category block */
+.catblock{background:#fff;border:1px solid #e3d9c8;border-radius:14px;margin-bottom:18px;overflow:hidden;box-shadow:0 2px 10px rgba(60,50,20,.05)}
+.cathead{display:flex;align-items:center;gap:12px;background:#efe8d6;padding:12px 16px}
+.cathead input.cname{border:1.5px solid transparent;background:transparent;font:inherit;font-weight:700;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:#264a3b;padding:6px 10px;border-radius:8px;flex:1;min-width:0}
+.cathead input.cname:focus{border-color:#c9a227;background:#fff;outline:none}
+.cathead .cnt{font-size:12.5px;color:#8a7a5a;white-space:nowrap}
+
+/* item row: photo card left, labelled fields right */
+.itrow{display:flex;gap:16px;align-items:stretch;padding:14px 16px;border-top:1px solid #eee6d4}
+.itrow:nth-child(even){background:#fcfbf6}
+.it-photo{flex:0 0 132px;display:flex;flex-direction:column;gap:6px}
+.it-photo .thumb{width:132px;height:96px;border:2px dashed #cdbf9f;border-radius:10px;background:#faf7ef;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;font-weight:600;color:#8a7a5a;cursor:pointer;overflow:hidden;line-height:1.3}
+.it-photo .thumb img{width:100%;height:100%;object-fit:contain;display:block}
+.it-photo .ibtn{width:100%}
+.it-main{flex:1;min-width:0;display:flex;flex-wrap:wrap;gap:10px 12px;align-items:flex-end}
+.it-field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.it-field label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#8a7a5a}
+.it-field input{border:1.5px solid #ddd2bd;border-radius:9px;padding:9px 11px;font:inherit;font-size:14px;background:#fff;color:#2c3a2e}
+.it-field input:focus{outline:none;border-color:#c9a227}
+.f-nm{flex:3 1 220px}
+.f-ct{flex:2 1 160px}
+.f-sr{flex:0 0 152px}
+.f-sr .srwrap{display:flex;align-items:stretch;gap:5px}
+.f-sr input{flex:1 1 auto;min-width:0;text-align:center}
+.srbtn{flex:0 0 40px;min-height:40px;border:1.5px solid #264a3b;background:#eef4ec;color:#264a3b;border-radius:9px;font:inherit;font-size:18px;font-weight:700;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.srbtn:hover{background:#e2ecdd}
+.srbtn:active{background:#d4e3cf}
+.it-del{align-self:flex-end;margin-left:auto}
+
+/* buttons */
+.ibtn{border:1.5px solid #d9cfb8;background:#faf7ef;border-radius:9px;padding:8px 12px;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer;color:#5a5245;white-space:nowrap}
+.ibtn:hover{background:#f2ecdc}
+.ibtn.up{border-color:#264a3b;color:#264a3b;background:#eef4ec}
+.ibtn.up:hover{background:#e2ecdd}
+.ibtn.del{color:#b0664f;border-color:#e0b9ac}
+.ibtn.del:hover{background:#faf0ec}
+
+.addrow{padding:12px 16px;border-top:1px solid #eee6d4;background:#fbf9f1}
+.addrow .additem{width:100%;padding:12px}
+.msg{font-size:13px;font-weight:600;color:#264a3b}
+
+/* mobile: keep photo card left, stack fields */
+@media (max-width:640px){
+  .itrow{gap:10px;padding:12px 10px}
+  .it-photo{flex:0 0 108px}
+  .it-photo .thumb{width:108px;height:82px;font-size:11px}
+  .it-photo .ibtn{padding:8px 6px;font-size:11.5px}
+  .it-main{gap:8px}
+  .f-nm{flex:1 1 100%}
+  .f-ct{flex:1 1 130px}
+  .f-sr{flex:0 0 148px}
+  .srbtn{flex-basis:44px;min-height:44px;font-size:20px}
+  .it-del{margin-left:0;width:100%;padding:10px}
+  .toolbar .btn-line,.toolbar .btn-danger,.toolbar .btn-solid{padding:11px 14px;font-size:13px}
+  #catSearch{max-width:none !important;flex:1 1 100%}
+}
+
+/* staff-edit approval bar */
+.stagebar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fdf3d7;border:1.5px solid #e6cf87;color:#6b5210;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:13px}
+.stagebar .stageuser{font-weight:700}
+.stagebar.staff{background:#eef4ec;border-color:#c4d6c6;color:#264a3b}
+
+/* busy spinner on action buttons (Deep 25 Oct 18:14: clicks must give feedback) */
+.btn-solid.loading,.btn-line.loading,.btn-danger.loading{position:relative;color:transparent!important;pointer-events:none}
+.btn-solid.loading::after,.btn-line.loading::after,.btn-danger.loading::after{content:'';position:absolute;left:50%;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border:2.5px solid rgba(38,74,59,.25);border-top-color:#264a3b;border-radius:50%;animation:bbthspin .7s linear infinite}
+.btn-solid.loading::after{border-color:rgba(255,255,255,.35);border-top-color:#fff}
+@keyframes bbthspin{to{transform:rotate(360deg)}}
+#btnUndo:disabled,#btnRedo:disabled{opacity:.45;cursor:default}
+
+/* Full-page mode (toolbar toggle): editor uses the whole viewport width */
+body.fullpage #main{max-width:none;padding-left:20px;padding-right:20px}
+/* Phones: full-page mode trims side padding so the toggle has a real effect. */
+@media (max-width:760px){
+  body.fullpage #main{padding-left:8px;padding-right:8px}
+}
+
+/* recycle bin: stacked category sections, one tidy row per entry (overrides .stagebar flex) */
+#binbar{display:block}
+#binbar .binhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+#binbar .binsub{opacity:.7;font-size:12px}
+#binbar .binsec{margin-top:10px;border-top:1px solid #e6cf87;padding-top:6px}
+#binbar .binsechead{font-weight:700;margin-bottom:2px}
+#binbar .binrow{display:flex;align-items:center;gap:10px;padding:2px 0 2px 12px}
+#binbar .binname{flex:1;min-width:0;overflow-wrap:anywhere}
+#binbar .binmark{opacity:.65;font-size:12px;white-space:nowrap}

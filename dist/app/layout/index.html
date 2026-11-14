@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBTH Layout Designer - Venue Outline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/app/layout/layout.css?v=1">
+<link rel="stylesheet" href="/css/modern.css?v=5">
+</head>
+<body>
+<header class="app-header">
+  <img src="/assets/logo-lockup-dark.png?v=6" alt="BBTH" class="h-logo">
+  <div>
+    <h1>Layout Designer</h1>
+    <p><span class="tg-ui">Crafting Dreams with Precision</span></p>
+  </div>
+  <a class="backlink" href="/app/">Quotation Maker</a>
+  <button class="backlink" type="button" style="cursor:pointer;background:none;border:0;font:inherit" onclick="location.reload()">Refresh</button>
+  <a class="backlink" href="/">Home</a>
+</header>
+
+<div id="needLogin" class="hidden">
+  <div class="login-note">
+    <img src="/assets/logo-lockup.png?v=6" alt="BBTH">
+    <h2>Login required</h2>
+    <p>This tool is private. Log in from the staff portal first.</p>
+    <a class="btn-solid" href="/app/">Go to login</a>
+  </div>
+</div>
+
+<main id="layMain" class="hidden">
+  <aside class="panel">
+    <section>
+      <h3>Sheet details</h3>
+      <div class="field"><label>Client name</label><input id="inClient" type="text" placeholder="e.g. Dr. Farah" autocomplete="off"></div>
+      <div class="field"><label>Event date</label><input id="inDate" type="text" placeholder="e.g. 05/12/2026" autocomplete="off"></div>
+    </section>
+    <section>
+      <h3>Venue</h3>
+      <div class="field"><label>Shape</label>
+        <select id="inShape"><option value="rect">Rectangle</option><option value="lshape">L-shape</option></select>
+      </div>
+      <div class="grid2">
+        <div class="field"><label>Width (ft)</label><input id="inVW" type="number" min="10" step="1" value="320"></div>
+        <div class="field"><label>Depth (ft)</label><input id="inVD" type="number" min="10" step="1" value="200"></div>
+      </div>
+      <div class="grid2 hidden" id="extFields">
+        <div class="field"><label>Ext. width (ft)</label><input id="inEW" type="number" min="5" step="1" value="80"></div>
+        <div class="field"><label>Ext. depth (ft)</label><input id="inED" type="number" min="5" step="1" value="80"></div>
+      </div>
+      <p class="sqft">Total area: <b id="outSqft">64,000</b> sq ft</p>
+    </section>
+    <section>
+      <h3>Add item</h3>
+      <div class="field"><label>Place at (direction)</label>
+        <select id="inPlace">
+          <option value="auto">Auto - first free spot</option>
+          <option value="top-left">Top-left</option><option value="top">Top side</option><option value="top-right">Top-right</option>
+          <option value="left">Left side</option><option value="center" selected>Center</option><option value="right">Right side</option>
+          <option value="bottom-left">Bottom-left</option><option value="bottom">Bottom side</option><option value="bottom-right">Bottom-right</option>
+        </select>
+      </div>
+      <div class="palette" id="palette"></div>
+      <p class="hint">Choose a direction, then add an item - the whole block is placed automatically. You can drag to adjust afterwards.</p>
+      <p class="hint">Add items, then drag them into place on the map. You can change each item's size below.</p>
+    </section>
+    <section id="props">
+      <h3>Selected item</h3>
+      <p id="propsNone" class="hint">Select an item on the map - edit its name, size and count here.</p>
+      <div id="propsForm" class="hidden">
+      <div class="field"><label>Label</label><input id="pLabel" type="text" autocomplete="off"></div>
+      <div class="grid2">
+        <div class="field"><label id="pWLab">Width (ft)</label><input id="pW" type="number" min="1" step="0.5"></div>
+        <div class="field"><label id="pHLab">Height (ft)</label><input id="pH" type="number" min="1" step="0.5"></div>
+      </div>
+      <div class="grid2 hidden" id="pCountWrap">
+        <div class="field"><label id="pCountLabel">Count</label><input id="pCount" type="number" min="1" step="1"></div>
+        <div class="field hidden" id="pChwWrap"><label>Chair size (ft)</label><input id="pChw" type="number" min="0.5" step="0.5" value="1.5"></div>
+      </div>
+      <div class="field" id="pColorWrap"><label>Colour</label>
+        <select id="pColor">
+          <option value="#c4574e">Red</option><option value="#f2c14e">Yellow</option>
+          <option value="#4d7a5f">Green</option><option value="#8a8f98">Grey</option>
+          <option value="#264a3b">Sage</option><option value="#2b2b2b">Black</option>
+        </select>
+      </div>
+      <button id="pDel" class="btn-danger">Delete item</button>
+      </div>
+    </section>
+    <section>
+      <button id="btnPdf" class="btn-solid big">Download PDF</button>
+      <button id="btnClear" class="btn-ghost">Clear all items</button>
+    </section>
+  </aside>
+  <section class="canvas-wrap">
+    <div id="toast" class="toast"></div>
+    <svg id="map" xmlns="http://www.w3.org/2000/svg"></svg>
+  </section>
+</main>
+
+<script src="/js/data.js?v=34"></script>
+<script src="/vendor/jspdf.umd.min.js"></script>
+<script src="/js/crosstab.js?v=20261026h"></script>
+<script src="/app/layout/layout.js?v=20261026h"></script>
+</body>
+</html>

@@ -1,0 +1,1851 @@
+{
+ "note": "DRAFT CATALOGUE - union of sheet A (Essential Items for Pandal and Decor) + sheet B (BBTH requisition table), built 24 Oct from comparison. Not final: 8 unclear items awaiting Deep (B8/B19/B30/B38/B48/B51/B52/B73, A-L16 merut), 8 probable matches NOT merged. All photos pending.",
+ "groups": {
+  "c": "General (unconfirmed)",
+  "h": "Hindu (source-labeled)",
+  "m": "Muslim (source-labeled)",
+  "r": "Needs Review"
+ },
+ "categories": [
+  {
+   "name": "Main Items",
+   "items": [
+    {
+     "n": "Bamboo",
+     "s": "A1=B1",
+     "g": "c"
+    },
+    {
+     "n": "Truss",
+     "s": "A2,A4=B2",
+     "g": "c"
+    },
+    {
+     "n": "Tirpal",
+     "s": "A3=B3",
+     "g": "c"
+    },
+    {
+     "n": "Rosi (Handwritten)",
+     "s": "A4",
+     "g": "c",
+     "f": [
+      "pm:B4 Rori"
+     ]
+    },
+    {
+     "n": "Basepate",
+     "s": "A5",
+     "g": "c",
+     "f": [
+      "pm:B6 Boro plate"
+     ]
+    },
+    {
+     "n": "Hexo/Korat/Blade",
+     "s": "A6=B7",
+     "g": "c",
+     "f": [
+      "unclear in B"
+     ]
+    },
+    {
+     "n": "Tap Fita",
+     "s": "A7=B9",
+     "g": "c"
+    },
+    {
+     "n": "Gunatar Patla/Mota",
+     "s": "A8=B10+B29",
+     "g": "c",
+     "v": "patla/mota variants"
+    },
+    {
+     "n": "Haturi Martol",
+     "s": "A9=B11",
+     "g": "c"
+    },
+    {
+     "n": "Gajal",
+     "s": "A10=B17",
+     "g": "c"
+    },
+    {
+     "n": "Suta",
+     "s": "A11=B18",
+     "g": "c"
+    },
+    {
+     "n": "Beet/Big Gajal",
+     "s": "A12=B12+B13",
+     "g": "c"
+    },
+    {
+     "n": "Carpet Tap",
+     "s": "A13",
+     "g": "c"
+    },
+    {
+     "n": "Wooden Khat",
+     "s": "A14=B14",
+     "g": "c"
+    },
+    {
+     "n": "Ply Stage",
+     "s": "A15=B15",
+     "g": "c",
+     "v": "B15 says with material"
+    },
+    {
+     "n": "Siri",
+     "s": "A16=B16",
+     "g": "c"
+    },
+    {
+     "n": "Plastic Chair",
+     "s": "A17",
+     "g": "c",
+     "f": [
+      "pm:B65 generic Chair"
+     ]
+    },
+    {
+     "n": "Dunlop Gadde",
+     "s": "A18=B45",
+     "g": "c"
+    },
+    {
+     "n": "Bedsheet",
+     "s": "A19=B46",
+     "g": "c",
+     "v": "B says white"
+    },
+    {
+     "n": "Iron/Golden And White Chiavery Chair",
+     "s": "A20",
+     "g": "c",
+     "f": [
+      "pm:B65 generic Chair"
+     ],
+     "v": "iron/golden/white variants"
+    },
+    {
+     "n": "Rosy Chair",
+     "s": "A22",
+     "g": "c",
+     "f": [
+      "pm:B65 generic Chair"
+     ]
+    },
+    {
+     "n": "National Round Chair",
+     "s": "A23",
+     "g": "c",
+     "f": [
+      "pm:B65 generic Chair"
+     ]
+    },
+    {
+     "n": "Crossback Chair",
+     "s": "A24",
+     "g": "c",
+     "f": [
+      "pm:B65 generic Chair"
+     ]
+    },
+    {
+     "n": "Crystal Chair",
+     "s": "A25",
+     "g": "c",
+     "f": [
+      "pm:B65 generic Chair"
+     ]
+    },
+    {
+     "n": "Iron Rod",
+     "s": "B5",
+     "g": "c",
+     "f": [
+      "distinct from Nikah Iron Rod?"
+     ]
+    },
+    {
+     "n": "Staff Gadaa Tali",
+     "s": "B8",
+     "g": "c",
+     "f": [
+      "asked Deep"
+     ]
+    },
+    {
+     "n": "Beji/Xul",
+     "s": "B19",
+     "g": "c",
+     "f": [
+      "unreadable",
+      "asked Deep"
+     ]
+    },
+    {
+     "n": "Old Tirpal",
+     "s": "B22",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Bamboo Items",
+   "items": [
+    {
+     "n": "Big And Small Kholsa",
+     "s": "A-Bamboo1",
+     "g": "c"
+    },
+    {
+     "n": "Kula",
+     "s": "A-Bamboo2",
+     "g": "c"
+    },
+    {
+     "n": "Dala/Channi/Khaloi/Tukri",
+     "s": "A-Bamboo3",
+     "g": "c",
+     "v": "4 named variants"
+    },
+    {
+     "n": "Tupa",
+     "s": "A-Bamboo4",
+     "g": "c"
+    },
+    {
+     "n": "Polu",
+     "s": "A-Bamboo5",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Cloth",
+   "items": [
+    {
+     "n": "Lykra",
+     "s": "A-Cloth1=B20c",
+     "g": "c",
+     "v": "off white,champagne,red,lavender,mint green,mehendi green,tezpur green,purple,peace,yellow"
+    },
+    {
+     "n": "Rhimjhim",
+     "s": "A-Cloth2=B20b",
+     "g": "c",
+     "v": "off white,champagne,red,lavender,mint green,mehendi green,purple,peace"
+    },
+    {
+     "n": "Surat Micro",
+     "s": "A-Cloth3=B20a",
+     "g": "c",
+     "v": "off white,champagne,red,lavender,mint green,tezpur green,mehendi green,badge,lavender,light grey,dark grey,black,ita colour,deep yellow"
+    }
+   ]
+  },
+  {
+   "name": "Carpet",
+   "items": [
+    {
+     "n": "Grass Carpet",
+     "s": "A-Carpet1=B21",
+     "g": "c"
+    },
+    {
+     "n": "Green Carpet",
+     "s": "A-Carpet2",
+     "g": "c"
+    },
+    {
+     "n": "5D Print Carpet",
+     "s": "A-Carpet3",
+     "g": "c"
+    },
+    {
+     "n": "Red Flower Carpet",
+     "s": "A-Carpet4",
+     "g": "c"
+    },
+    {
+     "n": "Camel/Golden Carpet",
+     "s": "A-Carpet5",
+     "g": "c"
+    },
+    {
+     "n": "Grey Carpet",
+     "s": "A-Carpet6",
+     "g": "c"
+    },
+    {
+     "n": "Blue Old Carpet",
+     "s": "A-Carpet7",
+     "g": "c"
+    },
+    {
+     "n": "Red Carpet",
+     "s": "A-Carpet8",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Lights",
+   "items": [
+    {
+     "n": "Naspoti Light",
+     "s": "A-L1=B23",
+     "g": "c"
+    },
+    {
+     "n": "Crystal Big Ball",
+     "s": "A-L2",
+     "g": "c",
+     "f": [
+      "pm:B25 - keep distinct from round"
+     ]
+    },
+    {
+     "n": "Crystal Round",
+     "s": "A-L3",
+     "g": "c",
+     "f": [
+      "pm:B25 Crystal round ball"
+     ]
+    },
+    {
+     "n": "Crystal",
+     "s": "A-L4",
+     "g": "c"
+    },
+    {
+     "n": "Taj Mahal Light",
+     "s": "A-L5",
+     "g": "c"
+    },
+    {
+     "n": "Parrot Case Light",
+     "s": "A-L6",
+     "g": "c"
+    },
+    {
+     "n": "Piyaz Light",
+     "s": "A-L7=B24",
+     "g": "c"
+    },
+    {
+     "n": "Mumbai Light Set",
+     "s": "A-L8=B26",
+     "g": "c"
+    },
+    {
+     "n": "Bird Light",
+     "s": "A-L9",
+     "g": "c"
+    },
+    {
+     "n": "LED Patta Fril Light Gajibo",
+     "s": "A-L10",
+     "g": "c"
+    },
+    {
+     "n": "Candel New Stand For Royal Table",
+     "s": "A-L11",
+     "g": "c",
+     "f": [
+      "pm:B69 R/T candle/props"
+     ]
+    },
+    {
+     "n": "Glass Chandelier For Stage",
+     "s": "A-L12",
+     "g": "c",
+     "f": [
+      "pm:B27 New stage chandeliar"
+     ]
+    },
+    {
+     "n": "Iron Jhumar Big",
+     "s": "A-L13",
+     "g": "c",
+     "f": [
+      "pm:B59 Stage jhumur"
+     ]
+    },
+    {
+     "n": "Iron Jhumar Medium",
+     "s": "A-L14",
+     "g": "c",
+     "f": [
+      "pm:B59 Stage jhumur"
+     ]
+    },
+    {
+     "n": "Nest Light",
+     "s": "A-L15=B28",
+     "g": "c"
+    },
+    {
+     "n": "Glass Merut Hanging 3size",
+     "s": "A-L16",
+     "g": "c",
+     "f": [
+      "unreadable",
+      "asked Deep"
+     ]
+    },
+    {
+     "n": "New Nest Islamic Light",
+     "s": "A-L17",
+     "g": "m"
+    },
+    {
+     "n": "Glass Chandelier ( Big)",
+     "g": "c",
+     "f": [
+      "pm:Glass Chandelier For Stage"
+     ]
+    },
+    {
+     "n": "Glass Chandelier ( Small Round",
+     "g": "c",
+     "f": [
+      "pm:Glass Chandelier For Stage"
+     ]
+    },
+    {
+     "n": "Glass Chandelier ( Big Round)",
+     "g": "c",
+     "f": [
+      "pm:Glass Chandelier For Stage"
+     ]
+    },
+    {
+     "n": "Table Lamp",
+     "g": "c"
+    },
+    {
+     "n": "Gate Lamp",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Glass Light",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Tuni Light",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Capsule Light",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Makoi Light",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Lily Light",
+     "g": "c"
+    },
+    {
+     "n": "Onion Nest Light",
+     "g": "c",
+     "f": [
+      "pm:Nest Light"
+     ]
+    },
+    {
+     "n": "Disco Ball",
+     "g": "c",
+     "f": [
+      "pm:Disco Balls"
+     ]
+    },
+    {
+     "n": "Round Crystal Light",
+     "g": "c",
+     "f": [
+      "pm:Crystal Round"
+     ]
+    },
+    {
+     "n": "Hanging Diamond Light",
+     "g": "c"
+    },
+    {
+     "n": "Lotus Light",
+     "g": "c"
+    },
+    {
+     "n": "Water Drop Light",
+     "g": "c"
+    },
+    {
+     "n": "Golden Crystal Light",
+     "g": "c",
+     "f": [
+      "pm:Crystal Round"
+     ]
+    },
+    {
+     "n": "Batasa Light",
+     "g": "c"
+    },
+    {
+     "n": "Butterfly Light",
+     "g": "c"
+    },
+    {
+     "n": "Frill Light",
+     "g": "c"
+    },
+    {
+     "n": "Aladdin Light",
+     "g": "c"
+    },
+    {
+     "n": "Black Lamp",
+     "g": "c"
+    },
+    {
+     "n": "Big And Small Golden Lamp",
+     "g": "c"
+    },
+    {
+     "n": "Cage Light",
+     "g": "c"
+    },
+    {
+     "n": "Golden Minar",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Glass Lamp",
+     "g": "c"
+    },
+    {
+     "n": "Moon Light",
+     "g": "c"
+    },
+    {
+     "n": "Flower Floor Light (White Mesh)",
+     "g": "c"
+    },
+    {
+     "n": "Bud Floor Light",
+     "g": "c"
+    },
+    {
+     "n": "Ball Floor Lamp (Pink)",
+     "g": "c"
+    },
+    {
+     "n": "Ball Floor Lamp (White)",
+     "g": "c"
+    },
+    {
+     "n": "Rose Floor Lamp",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Golden Dome Light",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Perforated Metallic Ball Lights",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Flower Items",
+   "items": [
+    {
+     "n": "Gunatar",
+     "s": "A-F1=B10+B29",
+     "g": "c"
+    },
+    {
+     "n": "Foam/Oasis",
+     "s": "A-F2=B31",
+     "g": "c"
+    },
+    {
+     "n": "Jali",
+     "s": "A-F3=B34",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Flower",
+     "s": "A-F4",
+     "g": "c",
+     "f": [
+      "pm:B32 Hanging leafes"
+     ]
+    },
+    {
+     "n": "Leaves",
+     "s": "A-F5",
+     "g": "c",
+     "f": [
+      "pm:B32 Hanging leafes"
+     ]
+    },
+    {
+     "n": "Big Flower",
+     "s": "A-F6",
+     "g": "c"
+    },
+    {
+     "n": "Small Flower",
+     "s": "A-F7",
+     "g": "c"
+    },
+    {
+     "n": "Only Red Flower",
+     "s": "A-F8=B36",
+     "g": "c"
+    },
+    {
+     "n": "Urli With Tool",
+     "s": "A-F11",
+     "g": "r"
+    },
+    {
+     "n": "Pan Pata",
+     "s": "A-F19",
+     "g": "r"
+    },
+    {
+     "n": "Kesi",
+     "s": "B30",
+     "g": "c",
+     "f": [
+      "unreadable",
+      "asked Deep"
+     ]
+    },
+    {
+     "n": "Flower Trunk",
+     "s": "B33",
+     "g": "c"
+    },
+    {
+     "n": "Kamini Pat",
+     "s": "B35",
+     "g": "r"
+    },
+    {
+     "n": "Table Flower Arrangement (Glass Vase)",
+     "g": "c"
+    },
+    {
+     "n": "Table Flower Arrangement (Crystal Vase)",
+     "g": "c"
+    },
+    {
+     "n": "Table Flower Arrangement (Ribbed Vase)",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Mandap",
+   "items": [
+    {
+     "n": "Mandap Setup Items",
+     "s": "A-F20",
+     "g": "r",
+     "f": [
+      "pm:B37 generic Mandap setup - keep components separate"
+     ]
+    },
+    {
+     "n": "Mandap Chair",
+     "s": "A-F12=B41",
+     "g": "r"
+    },
+    {
+     "n": "Mandap Tool",
+     "s": "A-F13=B42",
+     "g": "r",
+     "v": "B: new/old"
+    },
+    {
+     "n": "Mandap Pira",
+     "s": "A-F14=B40",
+     "g": "r"
+    },
+    {
+     "n": "Hum Pura",
+     "s": "A-F21",
+     "g": "r",
+     "f": [
+      "pm:B38 Humeepura",
+      "asked Deep"
+     ]
+    },
+    {
+     "n": "Kalpuli Stand",
+     "s": "A-F22=B39+B49",
+     "g": "r"
+    },
+    {
+     "n": "Phoolon Ka Chaddar Frame",
+     "s": "A-F23=B54",
+     "g": "r"
+    },
+    {
+     "n": "Iron Baseplate For Mandap",
+     "s": "A-F24",
+     "g": "c"
+    },
+    {
+     "n": "Mandap Kalsi Design",
+     "s": "A-F36",
+     "g": "r"
+    },
+    {
+     "n": "Mandap Hanging Items",
+     "s": "B43",
+     "g": "r"
+    },
+    {
+     "n": "Mandap Backdrop",
+     "s": "B44",
+     "g": "r"
+    },
+    {
+     "n": "Mandap Plateform",
+     "s": "B47",
+     "g": "r"
+    },
+    {
+     "n": "Mandap Sit/Set",
+     "s": "B48",
+     "g": "r",
+     "f": [
+      "unreadable",
+      "asked Deep"
+     ]
+    },
+    {
+     "n": "Coconut",
+     "s": "B50",
+     "g": "r"
+    },
+    {
+     "n": "Koloh",
+     "s": "B51",
+     "g": "r",
+     "f": [
+      "asked Deep",
+      "pm:A Props kolsi"
+     ]
+    },
+    {
+     "n": "Khurmala",
+     "s": "B52",
+     "g": "r",
+     "f": [
+      "asked Deep"
+     ]
+    },
+    {
+     "n": "Shorai",
+     "s": "B53",
+     "g": "r"
+    },
+    {
+     "n": "SFX Stage",
+     "s": "B55",
+     "g": "c"
+    },
+    {
+     "n": "Mandap Cusion Stool",
+     "g": "c"
+    },
+    {
+     "n": "Decorative Mandap Tool",
+     "g": "c"
+    },
+    {
+     "n": "Flower Mandap Pillar",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Nikah",
+   "items": [
+    {
+     "n": "Nikah Setup",
+     "s": "existing services list",
+     "g": "m"
+    },
+    {
+     "n": "Nikah Iron Rod",
+     "s": "A-F25",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "name": "Haldi & Mehendi",
+   "items": [
+    {
+     "n": "Haldi Setup",
+     "s": "A-F9=B84",
+     "g": "r",
+     "v": "B84: backdrop materials"
+    },
+    {
+     "n": "Mehendi Setup",
+     "s": "A-F10=B85",
+     "g": "r"
+    },
+    {
+     "n": "Mehendi Backdrop",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Stage",
+   "items": [
+    {
+     "n": "Stage Center Table",
+     "s": "A-F16=B63",
+     "g": "c"
+    },
+    {
+     "n": "Stage Flex And Carpet",
+     "s": "A-F17=B64",
+     "g": "c",
+     "v": "flex/carpet/grass carpet"
+    },
+    {
+     "n": "Bridal Sofa",
+     "s": "A-F15=B60",
+     "g": "c",
+     "v": "B: with pillow"
+    },
+    {
+     "n": "Stage Khat/Ply",
+     "s": "B56",
+     "g": "c",
+     "f": [
+      "bundle = wooden khat + ply stage - keep components too"
+     ]
+    },
+    {
+     "n": "Stage Backdrop",
+     "s": "B57",
+     "g": "c",
+     "f": [
+      "generic - distinct from named backdrops"
+     ]
+    },
+    {
+     "n": "Stage Hanging",
+     "s": "B58",
+     "g": "c"
+    },
+    {
+     "n": "Stage Props",
+     "s": "B61",
+     "g": "c",
+     "v": "5 blank sub-rows on sheet"
+    },
+    {
+     "n": "Stage Tub & Pitol Items",
+     "s": "B62",
+     "g": "c"
+    },
+    {
+     "n": "Pine Backdrop",
+     "s": "A-F26",
+     "g": "c"
+    },
+    {
+     "n": "Plain Ply Cutting Board",
+     "s": "A-F27",
+     "g": "c"
+    },
+    {
+     "n": "Door Design Backdrop",
+     "s": "A-F28",
+     "g": "c"
+    },
+    {
+     "n": "Lanka Design Stage Backdrop",
+     "s": "A-F33",
+     "g": "c"
+    },
+    {
+     "n": "Wooden Door Design",
+     "s": "A-F35",
+     "g": "c"
+    },
+    {
+     "n": "Butterfly Stand",
+     "s": "A-F37",
+     "g": "c"
+    },
+    {
+     "n": "Disco Balls",
+     "s": "A-F38",
+     "g": "c"
+    },
+    {
+     "n": "Mirror Backdrop Interior",
+     "g": "c"
+    },
+    {
+     "n": "4\u00d710 Backdrop",
+     "g": "c",
+     "f": [
+      "pm:4/8 & 4/10 Iron Frame All Type"
+     ]
+    },
+    {
+     "n": "Semi Circle Backdrop",
+     "g": "c"
+    },
+    {
+     "n": "Single Semi Circle Opening Backdrop",
+     "g": "c"
+    },
+    {
+     "n": "Platform Panels",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Furniture",
+   "items": [
+    {
+     "n": "Royal Table",
+     "s": "A-F45=B68",
+     "g": "c"
+    },
+    {
+     "n": "VIP Sofa",
+     "s": "A-F46=B76",
+     "g": "c",
+     "v": "B: new"
+    },
+    {
+     "n": "Center Table",
+     "s": "A-F47=B77",
+     "g": "c"
+    },
+    {
+     "n": "Wooden Round Table",
+     "s": "A-F40",
+     "g": "c"
+    },
+    {
+     "n": "2x4 Desk",
+     "s": "A-F41=B72",
+     "g": "c"
+    },
+    {
+     "n": "Table Cover",
+     "s": "A-F42",
+     "g": "c"
+    },
+    {
+     "n": "Table Top",
+     "s": "A-F43",
+     "g": "c"
+    },
+    {
+     "n": "Table Plastic",
+     "s": "A-F44",
+     "g": "c"
+    },
+    {
+     "n": "Wall Mirror All Type",
+     "s": "A-F48",
+     "g": "c"
+    },
+    {
+     "n": "Round Table Top",
+     "s": "A-F49",
+     "g": "c",
+     "v": "a) Iron Round b) Flower Pot c) Bamboo Items d) Mick Set Golden e) Black Lamp f) Golden Lamp"
+    },
+    {
+     "n": "Table (Generic)",
+     "s": "B66",
+     "g": "c",
+     "f": [
+      "coverage check"
+     ]
+    },
+    {
+     "n": "Round Table Cover/Colont",
+     "s": "B67",
+     "g": "c",
+     "f": [
+      "coverage check"
+     ]
+    },
+    {
+     "n": "R/T Candle/Props",
+     "s": "B69",
+     "g": "c",
+     "f": [
+      "pm:A-L11 candel new stand"
+     ]
+    },
+    {
+     "n": "R/T Top Cloth With Flower Pot",
+     "s": "B70",
+     "g": "c",
+     "v": "4 blank sub-rows"
+    },
+    {
+     "n": "Candle",
+     "s": "B71",
+     "g": "c",
+     "f": [
+      "pm:A-F51 Candle Stand"
+     ]
+    },
+    {
+     "n": "Fri",
+     "s": "B73",
+     "g": "c",
+     "f": [
+      "unreadable",
+      "asked Deep - fridge?"
+     ]
+    },
+    {
+     "n": "Paper Cylinder",
+     "s": "A-F50",
+     "g": "c"
+    },
+    {
+     "n": "Candle Stand",
+     "s": "A-F51",
+     "g": "c"
+    },
+    {
+     "n": "Elephant Table",
+     "g": "c"
+    },
+    {
+     "n": "Wooden Round Drawer With Hanging",
+     "g": "c"
+    },
+    {
+     "n": "Wooden Square Chess Stool",
+     "g": "c"
+    },
+    {
+     "n": "Wooden Small Stool With Drawer",
+     "g": "c"
+    },
+    {
+     "n": "Wooden Medium Stool With Drawer",
+     "g": "c"
+    },
+    {
+     "n": "Wooden Big Stool With DoubleDrawer",
+     "g": "c"
+    },
+    {
+     "n": "Wooden Stool Bend Legs",
+     "g": "c"
+    },
+    {
+     "n": "Golden Centre Table",
+     "g": "c"
+    },
+    {
+     "n": "Round Stage Table",
+     "g": "c"
+    },
+    {
+     "n": "Round Centre Table",
+     "g": "c"
+    },
+    {
+     "n": "Grey Sofa",
+     "g": "c"
+    },
+    {
+     "n": "Black And White Fabric Sofa",
+     "g": "c"
+    },
+    {
+     "n": "Acrylic Chair",
+     "g": "c"
+    },
+    {
+     "n": "Round Table",
+     "g": "c"
+    },
+    {
+     "n": "Cross Bank Chair",
+     "g": "c"
+    },
+    {
+     "n": "Tajmahal Table",
+     "g": "c"
+    },
+    {
+     "n": "White Guest Sofa",
+     "g": "c"
+    },
+    {
+     "n": "X Table",
+     "g": "c"
+    },
+    {
+     "n": "Pink Wingback Chair (Pair)",
+     "g": "c"
+    },
+    {
+     "n": "Tiffany Chair (White)",
+     "g": "c"
+    },
+    {
+     "n": "Gold Chair Frame",
+     "g": "c"
+    },
+    {
+     "n": "White Carved Chair",
+     "g": "c"
+    },
+    {
+     "n": "White Cushion Chair",
+     "g": "c"
+    },
+    {
+     "n": "Beige High-Back Sofa",
+     "g": "c"
+    },
+    {
+     "n": "Red Side Table",
+     "g": "c"
+    },
+    {
+     "n": "Gold Console Table",
+     "g": "c"
+    },
+    {
+     "n": "Ornate Gold Chair",
+     "g": "c"
+    },
+    {
+     "n": "Cane Wood Sofa",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Entrance & Gates",
+   "items": [
+    {
+     "n": "Iron U Shape Truss Gate",
+     "s": "A-F30",
+     "g": "c",
+     "f": [
+      "pm:B78 - B variant is golden 10 ft"
+     ]
+    },
+    {
+     "n": "U Shape Trass Golden 10 Ft",
+     "s": "B78",
+     "g": "c",
+     "v": "golden, 10 ft"
+    },
+    {
+     "n": "U Shape Trass White 12 Ft",
+     "s": "B79",
+     "g": "c",
+     "v": "white, 12 ft",
+     "f": [
+      "A ply version is 11/10/9/8 ft - distinct"
+     ]
+    },
+    {
+     "n": "New Iron Gate 2 Piece",
+     "s": "A-F31",
+     "g": "c"
+    },
+    {
+     "n": "Round Iron For Stage",
+     "s": "A-F32",
+     "g": "c"
+    },
+    {
+     "n": "New Ply U Shape 11/10/9/8 Ft",
+     "s": "A-F34",
+     "g": "c",
+     "v": "11/10/9/8 ft sizes"
+    },
+    {
+     "n": "4/8 & 4/10 Iron Frame All Type",
+     "s": "A-F29",
+     "g": "c"
+    },
+    {
+     "n": "Nametag Stand",
+     "s": "A-F18=B80",
+     "g": "c"
+    },
+    {
+     "n": "Snake Entry",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Photobooth",
+   "items": [
+    {
+     "n": "Photobooth Back Drop",
+     "s": "B81",
+     "g": "c",
+     "f": [
+      "coverage check"
+     ]
+    },
+    {
+     "n": "Props For Photobooth",
+     "s": "B82",
+     "g": "c",
+     "v": "3 blank sub-rows",
+     "f": [
+      "coverage check"
+     ]
+    },
+    {
+     "n": "Photo Booth Entrance",
+     "s": "A-Props16",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Cooler & Fans",
+   "items": [
+    {
+     "n": "Big Commercial Cooler",
+     "s": "A-Cooler1",
+     "g": "c",
+     "f": [
+      "pm:B74 Couler big/small/medium"
+     ]
+    },
+    {
+     "n": "Medium Cooler White",
+     "s": "A-Cooler2",
+     "g": "c",
+     "f": [
+      "pm:B74"
+     ]
+    },
+    {
+     "n": "Stand Fan",
+     "s": "A-Cooler3=B75",
+     "g": "c"
+    },
+    {
+     "n": "Mist Fan",
+     "s": "B75",
+     "g": "c",
+     "f": [
+      "B-only variant"
+     ]
+    },
+    {
+     "n": "Patio Heater",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Sound",
+   "items": [
+    {
+     "n": "Instrumental Sound",
+     "s": "B83",
+     "g": "c"
+    },
+    {
+     "n": "Mike",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Props",
+   "items": [
+    {
+     "n": "Iron 3feet Table",
+     "s": "A-Props1",
+     "g": "c"
+    },
+    {
+     "n": "Iron Maira",
+     "s": "A-Props2",
+     "g": "c",
+     "f": [
+      "unclear spelling"
+     ]
+    },
+    {
+     "n": "Taj Props",
+     "s": "A-Props3",
+     "g": "c"
+    },
+    {
+     "n": "3/4 Props",
+     "s": "A-Props4",
+     "g": "c"
+    },
+    {
+     "n": "Long Taj Table New",
+     "s": "A-Props5",
+     "g": "c"
+    },
+    {
+     "n": "Drawyer",
+     "s": "A-Props6",
+     "g": "c"
+    },
+    {
+     "n": "Console Table",
+     "s": "A-Props7",
+     "g": "c"
+    },
+    {
+     "n": "Paper Cylinder Stage",
+     "s": "A-Props8",
+     "g": "c"
+    },
+    {
+     "n": "Big Kolsi White",
+     "s": "A-Props9",
+     "g": "r"
+    },
+    {
+     "n": "Big Kolsi Brown",
+     "s": "A-Props10",
+     "g": "r"
+    },
+    {
+     "n": "Small Kolsi All Sizes",
+     "s": "A-Props11",
+     "g": "r"
+    },
+    {
+     "n": "White Flower Pot Small",
+     "s": "A-Props12",
+     "g": "c"
+    },
+    {
+     "n": "White Flower Pot Medium",
+     "s": "A-Props13",
+     "g": "c"
+    },
+    {
+     "n": "Golden Flower Pot",
+     "s": "A-Props14",
+     "g": "c"
+    },
+    {
+     "n": "Walky Talky",
+     "s": "A-Props15",
+     "g": "c"
+    },
+    {
+     "n": "Bamboo Chain",
+     "s": "A-Props17",
+     "g": "c"
+    },
+    {
+     "n": "Twenty 20 Paisa",
+     "s": "A-Props18",
+     "g": "c"
+    },
+    {
+     "n": "Iron Tribhuj Frame",
+     "s": "A-Props19 (printed 10.)",
+     "g": "c"
+    },
+    {
+     "n": "Flower Vase ( Gold Mojaic)",
+     "g": "c"
+    },
+    {
+     "n": "Terracotta Golden Pot (Big)",
+     "g": "c"
+    },
+    {
+     "n": "Terracotta Golden Pot (Midium)",
+     "g": "c"
+    },
+    {
+     "n": "Terracotta Golden Pot (Small)",
+     "g": "c"
+    },
+    {
+     "n": "Bird Candle Pot",
+     "g": "c"
+    },
+    {
+     "n": "Decorative Pira (Rectangle Red &White)",
+     "g": "c"
+    },
+    {
+     "n": "Sequin Pillow (Golden & White)",
+     "g": "c"
+    },
+    {
+     "n": "Sequin Pillow (Golden & Red)",
+     "g": "c"
+    },
+    {
+     "n": "Pillow White With Flower Design",
+     "g": "c"
+    },
+    {
+     "n": "Pillow White With Pink Blue Design",
+     "g": "c"
+    },
+    {
+     "n": "Pillow White With Pink Yellow Design",
+     "g": "c"
+    },
+    {
+     "n": "Pillow White With Peacock Design",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Diamond",
+     "g": "c"
+    },
+    {
+     "n": "Flower Vase Black & Gold",
+     "g": "c"
+    },
+    {
+     "n": "White Small Tub",
+     "g": "c"
+    },
+    {
+     "n": "Plastic Flower Vase",
+     "g": "c"
+    },
+    {
+     "n": "Plastic White Vase Multi Shape",
+     "g": "c"
+    },
+    {
+     "n": "Taj Mahal",
+     "g": "c",
+     "f": [
+      "pm:Taj Mahal Light"
+     ]
+    },
+    {
+     "n": "Taj Mahal Small",
+     "g": "c",
+     "f": [
+      "pm:Taj Mahal Light"
+     ]
+    },
+    {
+     "n": "Bell",
+     "g": "c"
+    },
+    {
+     "n": "Kol Puli Stand",
+     "g": "c"
+    },
+    {
+     "n": "Parrot Case",
+     "g": "c",
+     "f": [
+      "pm:Parrot Case Light"
+     ]
+    },
+    {
+     "n": "Golden Stage Stand",
+     "g": "c"
+    },
+    {
+     "n": "Small Golden Stage Stand",
+     "g": "c"
+    },
+    {
+     "n": "Big Tree",
+     "g": "c"
+    },
+    {
+     "n": "Photo Frame",
+     "g": "c"
+    },
+    {
+     "n": "Wall Star (Variant 1)",
+     "g": "c",
+     "f": [
+      "printed: Wall Star, catalogue item 74"
+     ]
+    },
+    {
+     "n": "Small Tree",
+     "g": "c"
+    },
+    {
+     "n": "Organza Flower",
+     "g": "c"
+    },
+    {
+     "n": "Hanging Gazra With Lotus",
+     "g": "c"
+    },
+    {
+     "n": "Moroccan Mdf",
+     "g": "c"
+    },
+    {
+     "n": "Flower Urli Small",
+     "g": "c"
+    },
+    {
+     "n": "Small Golden Pot",
+     "g": "c"
+    },
+    {
+     "n": "Wall Star (Variant 2)",
+     "g": "c",
+     "f": [
+      "printed: Wall Star, catalogue item 84"
+     ]
+    },
+    {
+     "n": "Cross Selfie Structure",
+     "g": "c"
+    },
+    {
+     "n": "New Small Glass Jar",
+     "g": "c",
+     "f": [
+      "name/photo mismatch per printed catalogue"
+     ]
+    },
+    {
+     "n": "Hanging Cylinder",
+     "g": "c"
+    },
+    {
+     "n": "Aladdin Tupl",
+     "g": "c"
+    },
+    {
+     "n": "Decorative Vessel (Gold-White)",
+     "g": "c"
+    },
+    {
+     "n": "Brass Vase (Tall)",
+     "g": "c"
+    },
+    {
+     "n": "Brass Vase (Trumpet)",
+     "g": "c"
+    },
+    {
+     "n": "Brass Vase (Round)",
+     "g": "c"
+    },
+    {
+     "n": "Hammered Brass Bowl",
+     "g": "c"
+    },
+    {
+     "n": "Peacock Brass Lamp",
+     "g": "c"
+    },
+    {
+     "n": "Golden Geometric Frame",
+     "g": "c"
+    },
+    {
+     "n": "Brass Planter Set (3 Pc)",
+     "g": "c"
+    },
+    {
+     "n": "Brass Urli Bowl",
+     "g": "c"
+    },
+    {
+     "n": "Golden Finial Set",
+     "g": "c"
+    },
+    {
+     "n": "Green Moroccan Table",
+     "g": "c"
+    },
+    {
+     "n": "Green Moroccan Cube",
+     "g": "c"
+    },
+    {
+     "n": "Orange Decorative Panel",
+     "g": "c"
+    },
+    {
+     "n": "Red Pedestal",
+     "g": "c"
+    },
+    {
+     "n": "Patterned Table Cloth",
+     "g": "c"
+    },
+    {
+     "n": "Amber Ribbed Vessel",
+     "g": "c"
+    },
+    {
+     "n": "Gold Embossed Vessel",
+     "g": "c"
+    },
+    {
+     "n": "Silver Patterned Vessel",
+     "g": "c"
+    },
+    {
+     "n": "Pink Patterned Vessel",
+     "g": "c"
+    },
+    {
+     "n": "Amber Round Bottle Vase",
+     "g": "c"
+    },
+    {
+     "n": "Purple Twisted Vase",
+     "g": "c"
+    },
+    {
+     "n": "Pale Yellow Faceted Vessel",
+     "g": "c"
+    },
+    {
+     "n": "Blue Lidded Jar",
+     "g": "c"
+    },
+    {
+     "n": "Gold Cylindrical Vessel",
+     "g": "c"
+    },
+    {
+     "n": "Gold Vertical-Bar Frame",
+     "g": "c"
+    },
+    {
+     "n": "Gold Grid Frame (Fine Grid)",
+     "g": "c"
+    },
+    {
+     "n": "Gold Grid Frame (Medium Grid)",
+     "g": "c"
+    },
+    {
+     "n": "Gold Grid Frame (Large Grid)",
+     "g": "c"
+    },
+    {
+     "n": "Gold Open Frame (Tall, Side Bars)",
+     "g": "c"
+    },
+    {
+     "n": "Gold Arched Ornamental Frame",
+     "g": "c"
+    },
+    {
+     "n": "Gold Scalloped Oval-Pattern Panel",
+     "g": "c"
+    },
+    {
+     "n": "Gold Curved-Top Vertical-Bar Panel",
+     "g": "c"
+    },
+    {
+     "n": "Gold Diagonal-Bar Frame",
+     "g": "c"
+    },
+    {
+     "n": "Gold Arch Frame (Round Top)",
+     "g": "c"
+    },
+    {
+     "n": "Gold Rectangular Backdrop Frame (with Feet)",
+     "g": "c"
+    },
+    {
+     "n": "Curved Tube Component",
+     "g": "c"
+    },
+    {
+     "n": "Curved Hook Stand",
+     "g": "c"
+    },
+    {
+     "n": "Sloping-Top Open Frame",
+     "g": "c"
+    },
+    {
+     "n": "White Pop-Up Canopy",
+     "g": "c"
+    },
+    {
+     "n": "Crystal-Style Candelabra",
+     "g": "c"
+    },
+    {
+     "n": "Ganesh Statue",
+     "g": "c"
+    }
+   ]
+  },
+  {
+   "name": "Setup Reference",
+   "items": [
+    {
+     "n": "Stage Jali Backdrop",
+     "g": "c"
+    },
+    {
+     "n": "Floral Entrance Arches",
+     "g": "c"
+    },
+    {
+     "n": "Floral Stage",
+     "g": "c"
+    },
+    {
+     "n": "Sofa Showroom Collection",
+     "g": "c"
+    },
+    {
+     "n": "Floral Ceremony Arch",
+     "g": "c"
+    },
+    {
+     "n": "White Floral Bench",
+     "g": "c"
+    },
+    {
+     "n": "Outdoor Ceremony Arches",
+     "g": "c"
+    },
+    {
+     "n": "Golden Full Stage",
+     "g": "c"
+    },
+    {
+     "n": "Blue Draped Stage",
+     "g": "c"
+    },
+    {
+     "n": "Blue Venue Entrance",
+     "g": "c"
+    },
+    {
+     "n": "Dining Table Decor",
+     "g": "c"
+    },
+    {
+     "n": "Lounge Seating",
+     "g": "c"
+    },
+    {
+     "n": "Blue Arch Nook",
+     "g": "c"
+    },
+    {
+     "n": "Floral Installation with Red Drapes",
+     "g": "c"
+    },
+    {
+     "n": "Outdoor Parasol Setup",
+     "g": "c"
+    },
+    {
+     "n": "Cream & Red Floral Stage",
+     "g": "c"
+    },
+    {
+     "n": "Woven Trays Floral Backdrop",
+     "g": "c"
+    },
+    {
+     "n": "Round Welcome Mirror",
+     "g": "c"
+    },
+    {
+     "n": "Red Floral Canopy",
+     "g": "c"
+    },
+    {
+     "n": "Cream Arch Stage with Cages",
+     "g": "c"
+    },
+    {
+     "n": "Lit Floral Arch Stage (Night)",
+     "g": "c"
+    },
+    {
+     "n": "Outdoor White Sofa Stage",
+     "g": "c"
+    },
+    {
+     "n": "Gold Circular Floral Stage",
+     "g": "c"
+    },
+    {
+     "n": "Gold Buffet Counter Setup",
+     "g": "c"
+    },
+    {
+     "n": "White Frame with Flowers (Night)",
+     "g": "c"
+    },
+    {
+     "n": "Mandap",
+     "g": "c"
+    },
+    {
+     "n": "Welcome Mirror Setup",
+     "g": "c"
+    },
+    {
+     "n": "Photo-Panel Setup",
+     "g": "c"
+    },
+    {
+     "n": "Stage Sofa Setup",
+     "g": "c"
+    },
+    {
+     "n": "White Lattice Lounge",
+     "g": "c"
+    }
+   ]
+  }
+ ],
+ "basev": 4
+}

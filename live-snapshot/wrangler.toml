@@ -1,0 +1,8 @@
+name = "bbth-quote"
+compatibility_date = "2024-09-25"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bbth-quote-db"
+database_id = "bffa3357-f9de-4485-b6d0-14bc1cc3d9e8"

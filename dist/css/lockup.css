@@ -1,0 +1,22 @@
+/* BBTH lockup: gold arch box, logo inside, tagline (English + Assamese) under it */
+.lk{display:inline-block;padding:3px;background:linear-gradient(160deg,#8a6318 0%,#c9a227 30%,#f6e27a 48%,#fff8d2 52%,#e9c96a 58%,#a8801c 78%,#6d5112 100%);box-sizing:border-box;flex:none}
+.lk-in{background:linear-gradient(170deg,#2b5243 0%,#254838 55%,#1e3b2e 100%);display:flex;flex-direction:column;align-items:center;justify-content:space-between;box-sizing:border-box;height:100%}
+.lk .lk-in img{display:block;background:none!important;padding:0!important;border-radius:0!important;object-fit:contain;height:auto!important}
+.lk-tg{text-align:center;color:#e9d27a;line-height:1.35}
+.lk-tg i{display:block;font-family:"Playfair Display",Georgia,serif;font-style:italic}
+.lk-tg b{display:block;font-family:"Noto Sans Bengali",sans-serif;font-weight:500;margin-top:2px}
+/* full */
+.lk-full{width:230px;height:300px;border-radius:115px 115px 14px 14px}
+.lk-full .lk-in{border-radius:111px 111px 11px 11px;padding:66px 0 22px}
+.lk-full .lk-in img{width:62%!important}
+.lk-full .lk-tg{font-size:12px;padding:0 12px}
+/* mini (no tagline: too small to read) */
+.lk-mini{width:46px;height:56px;border-radius:23px 23px 6px 6px;padding:2px}
+.lk-mini .lk-in{border-radius:21px 21px 4px 4px;justify-content:center;padding:6px 0 0}
+.lk-mini .lk-in img{width:70%!important}
+.lk-mini .lk-tg{display:none}
+.lk-mini.lk-sm{width:40px;height:48px;border-radius:20px 20px 5px 5px}
+.lk-mini.lk-sm .lk-in{border-radius:18px 18px 3px 3px}
+.login-card>.lk{display:block;margin:0 auto 16px}
+.lk-full.lk-md{width:180px;height:236px;border-radius:90px 90px 12px 12px}.lk-full.lk-md .lk-in{border-radius:86px 86px 9px 9px;padding:46px 0 16px}.lk-full.lk-md .lk-tg{font-size:10px;padding:0 8px}
+.logo-card .lk{display:block}
